@@ -85,3 +85,66 @@
 		border: none;
 	}
 }
+
+.style-1 {
+	max-width: 560px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 13px 10px;
+	font-size: fsz(12, 15);
+	font-weight: 400;
+	line-height: 1;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	text-align: center;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.btn-default {
+	color: $c1;
+	border-color: $c1;
+
+	&:hover {
+		background-color: $c3;
+		border-color: $c3;
+	}
+}
+
+.btn-info {
+	color: $c3;
+	background-color: $c1;
+	border-color: $c1;
+
+	&:hover {
+		color: $c1;
+		background-color: transparent;
+		border-color: $c1;
+	}
+}
+
+.btn-light {
+	color: $c1;
+	background-color: transparent;
+	border-color: transparent;
+
+	&:hover {
+		border-color: $c1;
+	}
+}
+
+.icon {
+	position: relative;
+
+	svg {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		fill: currentColor;
+	}
+}
