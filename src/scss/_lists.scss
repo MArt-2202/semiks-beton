@@ -1,0 +1,13 @@
+.list-1,
+.list-2 {
+	display: grid;
+	gap: 30px;
+}
+
+.list-1 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.list-2 {
+	grid-template-columns: repeat(4, 1fr);
+}
