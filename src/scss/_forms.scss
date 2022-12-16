@@ -1,0 +1,42 @@
+input,
+button,
+textarea,
+select {
+	border: none;
+	outline: none;
+	box-shadow: none;
+	background: transparent;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+input[type="search"] {
+	box-sizing: border-box;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+textarea,
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input:not([type='checkbox']):not([type='radio']),
+textarea {
+	@include placeholder {
+		color: $cb;
+		text-overflow: ellipsis;
+		opacity: 1;
+	}
+}

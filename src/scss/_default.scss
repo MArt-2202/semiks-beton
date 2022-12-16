@@ -1,0 +1,335 @@
+:root {
+	font: $fsb $fb;
+	color: $cb;
+	box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+	:root {
+		font-size: fsz(14, 16);
+	}
+}
+
+body {
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+	flex-direction: column;
+}
+
+header,
+footer {
+	flex: 0 0 auto;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+@media (max-width: 1200px) {
+	main {
+		padding-top: 100px;
+	}
+}
+
+picture::selection,
+img::selection,
+table th::selection,
+table td::selection,
+a::selection,
+strong::selection,
+b::selection,
+em::selection,
+span::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+li::selection,
+input:not([type='checkbox']):not([type='radio'])::selection {
+	color: $c1;
+	background-color: $cb;
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 1230px) {
+	.container {
+		padding-left: mp(50, 1200);
+		padding-right: mp(50, 1200);
+	}
+}
+
+@media (max-width: 1024px) {
+	.container {
+		padding-left: mp(40, 1024);
+		padding-right: mp(40, 1024);
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 360px) {
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 900;
+	line-height: 1.25;
+}
+
+h1,
+h2 {
+	margin-bottom: 43px;
+}
+
+
+
+h2 {
+	font-size: fsz(38, 16);
+}
+
+@media (max-width: 1024px) {
+
+	h1,
+	h2 {
+		margin-bottom: 24px;
+	}
+
+	h2 {
+		font-size: fsz(31, 16);
+	}
+}
+
+@media (max-width: 576px) {
+	h2 {
+		font-size: fsz(31, 14);
+	}
+}
+
+@media (max-width: 415px) {
+	h2 {
+		font-size: fsz(29, 14);
+	}
+}
+
+p,
+ul,
+ol,
+blockquote,
+.video-wrapper {
+	margin-bottom: 23px;
+}
+
+p {
+	line-height: 1.6;
+}
+
+a {
+	color: $c3;
+	text-decoration: none;
+	@include trs-all;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+table {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+picture,
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+picture {
+	display: block;
+}
+
+b {
+	font-weight: 700;
+}
+
+.list-img,
+.list-img-2 {
+	position: relative;
+}
+
+.list-img {
+	overflow: hidden;
+
+	picture,
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include imgSt;
+	}
+}
+
+.list-img-2 {
+	div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		overflow: hidden;
+	}
+
+	picture,
+	img {
+		max-height: 100%;
+		width: auto;
+	}
+}
+
+iframe:not(.instagram-media),
+iframe:not(.facebook),
+iframe:not([id^='telegram']),
+video {
+	margin-bottom: 0;
+	border: none;
+}
+
+.video-wrapper,
+.video-wrapper-style-1 {
+
+	iframe:not(.instagram-media),
+	iframe:not(.facebook),
+	iframe:not([id^='telegram']),
+	video {
+		margin-bottom: 0;
+		border: none;
+	}
+}
+
+.video-wrapper {
+	position: relative;
+	margin-bottom: 25px;
+	padding-top: 56.25%;
+
+	iframe:not(.instagram-media),
+	iframe:not(.facebook),
+	iframe:not([id^='telegram']),
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.breadcrumbs {
+	margin-bottom: 20px;
+
+	li,
+	a {
+		position: relative;
+		display: inline-block;
+		color: $cb;
+	}
+
+	li {
+		margin-right: 5px;
+		margin-bottom: 10px;
+		padding-right: 16px;
+
+		&:after {
+			content: '—';
+			position: absolute;
+			right: 0;
+			top: 6px;
+			font-size: 10px;
+			color: currentColor;
+		}
+
+		&:last-child {
+			margin-right: 0;
+			padding-right: 0;
+
+			&:after {
+				display: none;
+			}
+
+			a {
+				pointer-events: none;
+				text-decoration: none;
+				opacity: 0.5;
+			}
+		}
+	}
+
+	a {
+		display: inline-block;
+		font-size: fsz(10, 16);
+		line-height: 1.25;
+		color: $cb;
+
+		&:hover {
+			color: $c3;
+			text-decoration: none;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.breadcrumbs {
+		li {
+			&:after {
+				top: 5px;
+			}
+		}
+
+		a {
+			font-size: fsz(10, 14);
+		}
+	}
+}
+
+.clearfix {
+
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
