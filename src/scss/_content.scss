@@ -128,3 +128,68 @@
 		opacity: 0;
 	}
 }
+
+/*
+=================================
+	SERVICES
+=================================
+*/
+.top-section+.services {
+	position: relative;
+	z-index: 10;
+	margin-top: -70px;
+}
+
+.services__list {
+	margin-bottom: 0;
+
+	li {
+		position: relative;
+		color: $c1;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba($c3, 0) 0%, #162B73 100%)
+		}
+	}
+
+	.list-img {
+		padding-top: 133.335%;
+
+		&+div {
+			position: absolute;
+			z-index: 1;
+			left: mp(30, 300);
+			right: mp(30, 300);
+			bottom: 28px;
+		}
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 10px;
+		font-size: fsz(14, 15);
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	p {
+		font-size: fsz(12, 15);
+		line-height: 1.25;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 769px) {
+	.top-section+.services {
+		margin-top: -100px;
+	}
+}
