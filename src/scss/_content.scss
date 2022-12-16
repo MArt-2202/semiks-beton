@@ -193,3 +193,55 @@
 		margin-top: -100px;
 	}
 }
+
+/*
+=================================
+	PRODUCTS LIST
+=================================
+*/
+.products-list {
+	li {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid $c5;
+	}
+
+	.list-img-2 {
+		padding-top: 100%;
+		border-bottom: 1px solid $c5;
+
+		div {
+			top: 15px;
+			bottom: 15px;
+			left: 15px;
+			right: 15px;
+		}
+
+		&+div {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			padding: 13px 15px;
+		}
+	}
+
+	strong,
+	span {
+		display: block;
+	}
+
+	strong {
+		margin-bottom: 10px;
+		font-size: fsz(16, 15);
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	span {
+		margin-top: auto;
+		font-size: fsz(14, 15);
+		font-weight: 500;
+		line-height: 1;
+		color: $c6;
+	}
+}
