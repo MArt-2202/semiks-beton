@@ -66,10 +66,18 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	background-color: $cb;
 }
 
-.container {
-	max-width: 1200px;
+.container,
+.container-md {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.container {
+	max-width: 1200px
+}
+
+.container-md {
+	max-width: 960px;
 }
 
 @media (max-width: 1230px) {
@@ -86,15 +94,26 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	}
 }
 
+@media (max-width: 990px) {
+	.container-md {
+		padding-left: mp(50, 1200);
+		padding-right: mp(50, 1200);
+	}
+}
+
 @media (max-width: 576px) {
-	.container {
+
+	.container,
+	.container-md {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
 }
 
 @media (max-width: 360px) {
-	.container {
+
+	.container,
+	.container-md {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
