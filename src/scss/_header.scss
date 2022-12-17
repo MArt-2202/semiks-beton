@@ -49,6 +49,21 @@ header {
 	color: $c1;
 }
 
+.header__phones-wrapper {
+	position: relative;
+	padding-left: 35px;
+
+	svg {
+		position: absolute;
+		left: 0;
+		top: calc(50% + 1px);
+		transform: translateY(-50%);
+		width: 18px;
+		height: 18px;
+		fill: $c1;
+	}
+}
+
 .header__phones {
 	a {
 		display: inline-block;
