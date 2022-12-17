@@ -80,10 +80,18 @@ footer {
 	color: $c1;
 
 	li {
+		position: relative;
+		padding-left: 25px;
 		line-height: 1.55;
 
 		&:not(:last-child) {
 			margin-bottom: 15px;
+		}
+
+		svg {
+			position: absolute;
+			left: 0;
+			fill: $c1;
 		}
 	}
 
@@ -91,6 +99,34 @@ footer {
 		display: table;
 		max-width: 100%;
 		color: $c1;
+	}
+
+	.icon-production {
+		width: 16px;
+		height: 16px;
+		top: 3px;
+	}
+
+	.icon-office {
+		width: 16px;
+		height: 18px;
+		top: 2px;
+	}
+
+	.icon-phone {
+		top: 2px;
+		width: 16px;
+		height: 17px;
+
+		&:last-child {
+			top: 27px;
+		}
+	}
+
+	.icon-email {
+		width: 16px;
+		height: 13px;
+		top: 6px;
 	}
 }
 
