@@ -1,5 +1,39 @@
 /*
 =================================
+	CONTENT BLOCKS
+=================================
+*/
+.content {
+	display: flex;
+}
+
+.content-1 {
+	gap: 60px;
+}
+
+.content-1__main {
+	flex-grow: 1;
+}
+
+@media (min-width: 1025px) {
+	.content-1 {
+		align-items: center;
+	}
+}
+
+@media (min-width: 1201px) {
+	.content-1 {
+		max-width: 1080px;
+	}
+
+	.content-1__aside {
+		flex: none;
+		width: mp(450, 1080);
+	}
+}
+
+/*
+=================================
 	TOP SECTION
 =================================
 */
