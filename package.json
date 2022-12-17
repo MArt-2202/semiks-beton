@@ -55,6 +55,7 @@
 		"yargs": "^15.4.1"
 	},
 	"dependencies": {
-		"@babel/polyfill": "^7.10.4"
+		"@babel/polyfill": "^7.10.4",
+		"swiper": "^8.4.5"
 	}
 }
