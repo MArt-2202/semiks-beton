@@ -23,6 +23,33 @@ export default function blockStyles() {
 		}
 	}
 
+	if (
+		document.querySelector('header .logo-company strong') &&
+		document.querySelector('.breadcrumbs') &&
+		document.querySelector('.breadcrumbs + h1') &&
+		!document.querySelector('.top-content') &&
+		!document.querySelector('.product-details__content')
+	) {
+		const title = document.querySelector('header .logo-company strong'),
+			list = document.querySelector('.breadcrumbs'),
+			mainTitle = document.querySelector('.breadcrumbs + h1');
+
+		if (window.matchMedia('(min-width: 1201px)').matches) {
+			list.style.marginLeft = `${title.offsetLeft + 16}px`;
+			list.style.opacity = 1;
+
+			mainTitle.style.marginLeft = `${title.offsetLeft + 16}px`;
+			mainTitle.style.opacity = 1;
+		}
+
+		if (window.matchMedia('(max-width: 1200px)').matches) {
+			list.style.marginLeft = '';
+			list.style.opacity = '';
+
+			mainTitle.style.marginLeft = '';
+			mainTitle.style.opacity = '';
+		}
+	}
 	if (document.querySelector('#order-form__quantity')) {
 		document.querySelector('#order-form__quantity').addEventListener('input', function (e) {
 			e.target.value = e.target.value.replace(/\D/g, '').substr(0, 10);
