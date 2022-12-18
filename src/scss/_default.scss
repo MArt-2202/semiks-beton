@@ -340,6 +340,14 @@ video {
 	}
 }
 
+@media (min-width: 1201px) {
+
+	.breadcrumbs,
+	.breadcrumbs+h1 {
+		opacity: 0;
+	}
+}
+
 @media (max-width: 576px) {
 	.breadcrumbs {
 		li {
