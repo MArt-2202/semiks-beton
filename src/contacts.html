@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+//=include('templates/head.html')
+
+<body itemscope itemtype="http://schema.org/WebPage">
+	//=include('templates/schemaOrgInfo.html')
+	//=include('templates/header.html')
+	<main>
+		<section>
+			<!-- CONTAINER -->
+			<div class="container">
+				<ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="index.html">
+							<span itemprop="name">Головна</span></a>
+						<meta itemprop="position" content="1">
+					</li>
+					<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+						<a itemprop="item" href="javascript:void(0)">
+							<span itemprop="name">Контакти</span>
+						</a>
+						<meta itemprop="position" content="2">
+					</li>
+				</ul>
+				<h1>Контакти</h1>
+				//=include('html_modules/_contacts-list.html')
+				//=include('html_modules/_contacts-info.html')
+			</div><!-- END CONTAINER -->
+		</section>
+		//=include('html_modules/_reviews.html')
+	</main>
+	//=include('templates/footer.html')
+	//=include('templates/afterFooterContent.html')
+</body>
+
+</html>
