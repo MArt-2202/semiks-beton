@@ -67,7 +67,8 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 }
 
 .container,
-.container-md {
+.container-md,
+.container-sm {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -78,6 +79,10 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 .container-md {
 	max-width: 960px;
+}
+
+.container-sm {
+	max-width: 800px;
 }
 
 @media (max-width: 1230px) {
@@ -101,10 +106,18 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	}
 }
 
+@media (max-width: 830px) {
+	.container-sm {
+		padding-left: mp(50, 1200);
+		padding-right: mp(50, 1200);
+	}
+}
+
 @media (max-width: 576px) {
 
 	.container,
-	.container-md {
+	.container-md,
+	.container-sm {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
