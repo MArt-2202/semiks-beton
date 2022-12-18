@@ -611,3 +611,88 @@
 		width: 100%;
 	}
 }
+
+/*
+=================================
+	CONTACTS
+=================================
+*/
+h1+.contacts-list {
+	padding-top: 70px;
+}
+
+.contacts-list {
+	li {
+		font-size: fsz(16, 15);
+		font-weight: 400;
+		color: $c8;
+		text-align: center;
+
+		p {
+			line-height: 1.45;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	span {
+		position: relative;
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		color: $c4;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			fill: currentColor;
+
+			&.icon-headphones {
+				width: 44px;
+				height: 50px;
+			}
+
+			&.icon-email-2 {
+				width: 50px;
+				height: 34px;
+			}
+
+			&.icon-location {
+				width: 33px;
+				height: 50px;
+			}
+		}
+	}
+
+	strong {
+		display: block;
+		margin-top: 23px;
+		margin-bottom: 18px;
+		font-size: fsz(24, 15);
+		font-weight: 400;
+		line-height: 1.2;
+	}
+
+	a {
+		display: table;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $c8;
+
+		&:hover {
+			text-decoration: none;
+			color: $c4;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	h1+.contacts-list {
+		padding-top: 40px;
+	}
+}
