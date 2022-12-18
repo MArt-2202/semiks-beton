@@ -5,6 +5,7 @@ import blocksStyles from './modules/blocksStyles';
 import blockPosition from './modules/blockPosition';
 import sliders from './modules/sliders';
 import masketInput from './modules/masketInput';
+import modal from './modules/modal';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 
@@ -29,6 +30,7 @@ if (isMobile()) {
 document.addEventListener('DOMContentLoaded', () => {
 	sliders();
 	masketInput();
+	modal();
 	tableWrapper();
 	toggleContent();
 }); // END READY
