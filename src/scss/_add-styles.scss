@@ -148,6 +148,18 @@
 	}
 }
 
+.btn-info-2 {
+	color: $c4;
+	background-color: $c1;
+	border-color: $c1;
+
+	&:hover {
+		color: $c1;
+		background-color: $c4;
+		border-color: $c1;
+	}
+}
+
 .btn-light {
 	color: $c1;
 	background-color: transparent;
