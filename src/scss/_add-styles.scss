@@ -94,6 +94,11 @@
 	margin-bottom: 100px;
 }
 
+.style-3 {
+	max-height: 300px;
+	overflow: hidden;
+}
+
 @media (max-width: 768px) {
 	.style-2 {
 		margin-bottom: 70px;
@@ -113,6 +118,13 @@
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+.btn-style-1 {
+	height: 40px;
+	line-height: 40px;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .btn-default {
@@ -144,6 +156,17 @@
 
 	&:hover {
 		border-color: $c1;
+	}
+}
+
+.btn-success {
+	color: $c1;
+	background-color: $c3;
+	border-color: $c3;
+
+	&:hover {
+		background-color: $c12;
+		border-color: $c12;
 	}
 }
 
