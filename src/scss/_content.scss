@@ -643,6 +643,43 @@
 	}
 }
 
+@media (max-width: 576px) {
+	.products-list {
+		strong {
+			font-size: fsz(16, 14);
+		}
+
+		span {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.products-list {
+		strong {
+			margin-bottom: 5px;
+			font-size: 1rem;
+		}
+
+		span {
+			font-size: fsz(12, 14);
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.products-list {
+		strong {
+			font-size: fsz(12, 14);
+		}
+
+		span {
+			font-size: fsz(10, 14);
+		}
+	}
+}
+
 /*
 =================================
 	PRODUCTS DETAILS
