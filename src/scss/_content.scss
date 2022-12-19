@@ -58,6 +58,36 @@
 	h2 {
 		font-size: fsz(38, 15);
 	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.info-1 {
+		h2 {
+			font-size: fsz(31, 15);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.info-1 {
+		h2 {
+			font-size: fsz(31, 14);
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.info-1 {
+		h2 {
+			font-size: fsz(29, 14);
+		}
+	}
 }
 
 @keyframes pulse {
