@@ -1,5 +1,13 @@
 // BLOCK POSITION
 export default function blockPosition() {
+	const bl1 = document.querySelector('.header__bl-2'),
+		bl2 = document.querySelector('.header__bl-3'),
+		bl3 = document.querySelector('.header__bl-4'),
+		bl4 = document.querySelector('.toggle__content > div'),
+		bl5 = document.querySelector('.header__nav'),
+		bl6 = document.querySelector('.header__phones-wrapper'),
+		bl7 = document.querySelector('.header__address');
+
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
 
@@ -51,6 +59,15 @@ export default function blockPosition() {
 			document.body.classList.add('min-1201');
 
 			if (document.querySelector('.min-1201')) {
+				if (bl1 && bl5) {
+					bl1.append(bl5);
+				}
+				if (bl2 && bl6) {
+					bl2.append(bl6);
+				}
+				if (bl3 && bl7) {
+					bl3.append(bl7);
+				}
 			}
 		}
 	}
@@ -62,6 +79,15 @@ export default function blockPosition() {
 			document.body.classList.add('max-1200');
 
 			if (document.querySelector('.max-1200')) {
+				if (bl4 && bl6) {
+					bl4.prepend(bl6);
+				}
+				if (bl6 && bl7) {
+					bl6.after(bl7);
+				}
+				if (bl4 && bl5) {
+					bl4.append(bl5);
+				}
 			}
 		}
 	}
