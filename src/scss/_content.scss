@@ -487,6 +487,19 @@
 		border: 1px solid $c5;
 	}
 
+	a {
+		display: block;
+		height: 100%;
+
+		&:hover {
+			text-decoration: none;
+
+			strong {
+				color: $c4;
+			}
+		}
+	}
+
 	.list-img-2 {
 		padding-top: 100%;
 		border-bottom: 1px solid $c5;
@@ -516,6 +529,7 @@
 		font-size: fsz(16, 15);
 		font-weight: 700;
 		line-height: 1.2;
+		@include trs-all;
 	}
 
 	span {
