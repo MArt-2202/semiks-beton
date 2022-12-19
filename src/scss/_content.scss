@@ -851,6 +851,48 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.contacts-list {
+		li {
+			font-size: 1rem;
+		}
+
+		strong {
+			font-size: fsz(20, 15);
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.contacts-list {
+		gap: 40px 30px;
+	}
+}
+
+@media (max-width: 576px) {
+	.contacts-list {
+		gap: 40px 20px;
+
+		strong {
+			font-size: fsz(18, 14);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.contacts-list {
+		gap: 40px 15px;
+
+		li {
+			font-size: fsz(12, 14);
+		}
+
+		strong {
+			font-size: fsz(16, 14);
+		}
+	}
+}
+
 .contacts-info {
 	h2 {
 		font-size: fsz(24, 15);
