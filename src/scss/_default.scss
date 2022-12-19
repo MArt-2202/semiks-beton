@@ -6,7 +6,7 @@
 
 @media (max-width: 576px) {
 	:root {
-		font-size: fsz(14, 15);
+		font-size: fsz(14, 16);
 	}
 }
 
@@ -40,7 +40,7 @@ main {
 
 @media (max-width: 1200px) {
 	main {
-		padding-top: 100px;
+		padding-top: 98px;
 	}
 }
 
@@ -146,7 +146,7 @@ h1 {
 
 h2 {
 	margin-bottom: 34px;
-	font-size: fsz(15, 15);
+	font-size: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -158,6 +158,10 @@ h2 {
 @media (max-width: 576px) {
 	h1 {
 		font-size: fsz(31, 14);
+	}
+
+	h2 {
+		font-size: fsz(15, 14);
 	}
 }
 
