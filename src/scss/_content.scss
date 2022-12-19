@@ -491,6 +491,92 @@
 	}
 }
 
+@media (max-width: 576px) {
+	.services__list {
+
+		a {
+			&:hover {
+				.list-img+div {
+					bottom: 35px;
+				}
+			}
+		}
+
+		.list-img {
+			&+div {
+				left: 20px;
+				right: 20px;
+				bottom: 18px;
+			}
+		}
+
+		strong {
+			font-size: 1rem;
+		}
+
+		p {
+			font-size: fsz(12, 14);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.services__list {
+		a {
+			&:hover {
+				.list-img+div {
+					bottom: 25px;
+				}
+			}
+		}
+
+		.list-img {
+			&+div {
+				left: 15px;
+				right: 15px;
+				bottom: 13px;
+			}
+		}
+
+		strong {
+			margin-bottom: 5px;
+			font-size: fsz(12, 14);
+		}
+
+		p {
+			font-size: fsz(10, 14);
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.services__list {
+		a {
+			&:hover {
+				.list-img+div {
+					bottom: 20px;
+				}
+			}
+		}
+
+		.list-img {
+			&+div {
+				left: 15px;
+				right: 15px;
+				bottom: 13px;
+			}
+		}
+
+		strong {
+			font-size: fsz(11, 14);
+		}
+
+		p {
+			font-size: fsz(9, 14);
+		}
+	}
+}
+
 /*
 =================================
 	PRODUCTS LIST
