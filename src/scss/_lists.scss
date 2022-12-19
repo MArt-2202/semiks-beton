@@ -11,3 +11,33 @@
 .list-2 {
 	grid-template-columns: repeat(4, 1fr);
 }
+
+@media (max-width: 1024px) {
+	.list-2 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 640px) {
+
+	.list-1,
+	.list-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 576px) {
+
+	.list-1,
+	.list-2 {
+		gap: 20px;
+	}
+}
+
+@media (max-width: 360px) {
+
+	.list-1,
+	.list-2 {
+		gap: 15px;
+	}
+}
