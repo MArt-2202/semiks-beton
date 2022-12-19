@@ -1,4 +1,8 @@
 export default function blockStyles() {
+	if(document.querySelector('header')){
+		document.querySelector('header').classList.add('init');
+	}
+
 	if (document.querySelector('#top-section')) {
 		document.body.classList.add('index-page');
 	} else {
