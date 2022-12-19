@@ -6,7 +6,11 @@ export default function blockPosition() {
 		bl4 = document.querySelector('.toggle__content > div'),
 		bl5 = document.querySelector('.header__nav'),
 		bl6 = document.querySelector('.header__phones-wrapper'),
-		bl7 = document.querySelector('.header__address');
+		bl7 = document.querySelector('.header__address'),
+		title = document.querySelector('header .header__logo-company'),
+		content = document.querySelector('#top-content'),
+		list = document.querySelector('.breadcrumbs'),
+		mainTitle = document.querySelector('.breadcrumbs + h1');
 
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
@@ -68,6 +72,26 @@ export default function blockPosition() {
 				if (bl3 && bl7) {
 					bl3.append(bl7);
 				}
+				if (
+					document.querySelector('header .header__logo-company strong') &&
+					document.querySelector('#top-content')
+				) {
+					content.style.marginLeft = `${title.offsetWidth}px`;
+					content.style.opacity = 1;
+				}
+				if (
+					document.querySelector('header .header__logo-company') &&
+					document.querySelector('.breadcrumbs') &&
+					document.querySelector('.breadcrumbs + h1') &&
+					!document.querySelector('.top-content') &&
+					!document.querySelector('.product-details__content')
+				) {
+					list.style.marginLeft = `${title.offsetWidth}px`;
+					list.style.opacity = 1;
+
+					mainTitle.style.marginLeft = `${title.offsetWidth}px`;
+					mainTitle.style.opacity = 1;
+				}
 			}
 		}
 	}
@@ -87,6 +111,26 @@ export default function blockPosition() {
 				}
 				if (bl4 && bl5) {
 					bl4.append(bl5);
+				}
+				if (
+					document.querySelector('header .header__logo-company strong') &&
+					document.querySelector('#top-content')
+				) {
+					content.style.marginLeft = '';
+					content.style.opacity = '';
+				}
+				if (
+					document.querySelector('header .header__logo-company') &&
+					document.querySelector('.breadcrumbs') &&
+					document.querySelector('.breadcrumbs + h1') &&
+					!document.querySelector('.top-content') &&
+					!document.querySelector('.product-details__content')
+				) {
+					list.style.marginLeft = '';
+					list.style.opacity = '';
+
+					mainTitle.style.marginLeft = '';
+					mainTitle.style.opacity = '';
 				}
 			}
 		}
