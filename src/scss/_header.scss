@@ -3,6 +3,14 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		overflow-y: hidden;
+	}
+
+	&.init {
+		.container {
+			height: auto;
+			overflow-y: visible;
+		}
 	}
 
 	ul {
@@ -10,7 +18,7 @@ header {
 	}
 }
 
-.logo-company {
+.header__logo-company {
 	display: inline-block;
 
 	img,
@@ -43,12 +51,6 @@ header {
 	}
 }
 
-.header__phones a,
-.header__address {
-	font-size: fsz(12, 15);
-	color: $c1;
-}
-
 .header__phones-wrapper {
 	position: relative;
 	padding-left: 35px;
@@ -67,10 +69,7 @@ header {
 .header__phones {
 	a {
 		display: inline-block;
-
-		font-weight: 900;
 		line-height: 1;
-
 
 		&:hover {
 			text-decoration: none;
@@ -97,18 +96,17 @@ header {
 		width: 100%;
 
 		.container {
+			height: 218px;
 			padding-top: 79px;
 			padding-bottom: 79px;
 		}
 	}
-
 
 	.index-page {
 		.logo-company {
 			position: relative;
 		}
 	}
-
 
 	.inner-page {
 		header {
@@ -132,7 +130,7 @@ header {
 		}
 	}
 
-	.header__bl-1 {
+	.header__bl-5 {
 		display: none;
 	}
 
@@ -156,6 +154,214 @@ header {
 			color: $c1;
 
 			&:hover {
+				color: $c4;
+			}
+		}
+	}
+
+	.header__phones a,
+	.header__address {
+		font-size: fsz(12, 15);
+		color: $c1;
+	}
+
+	.header__phones-wrapper {
+		svg {
+			fill: $c1;
+		}
+	}
+
+	.header__phones {
+		a {
+			font-weight: 900;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 998;
+		width: 100%;
+		background-color: $c3;
+
+		.container {
+			height: 70px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+
+	.header__bl-2,
+	.header__bl-3,
+	.header__bl-4 {
+		display: none;
+	}
+
+	.toggle-wrapper,
+	.toggle-btn {
+		position: relative;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+	}
+
+	.toggle-wrapper {
+		vertical-align: middle;
+
+		.header__nav,
+		.header__phones-wrapper,
+		.header__address {
+			display: block;
+
+		}
+	}
+
+	.toggle__content {
+		position: fixed;
+		top: 70px;
+		right: 0;
+		width: calc(min(300px, 100%));
+		bottom: 0;
+		z-index: 998;
+		opacity: 0;
+		visibility: hidden;
+		transform: scaleY(0);
+		transform-origin: top;
+		background-color: $c1;
+		@include trs-all;
+
+		>div {
+			position: relative;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			padding: 17px 15px 35px 15px;
+			text-align: center;
+			overflow-y: auto;
+
+		}
+
+		&.content-visible {
+			opacity: 1;
+			visibility: visible;
+			transform: scaleY(1);
+		}
+	}
+
+	.toggle-btn {
+		position: relative;
+		top: 1px;
+		padding: 0;
+		vertical-align: top;
+		overflow: hidden;
+		cursor: pointer;
+
+		span {
+			position: absolute;
+			left: 0;
+			height: 3px;
+			width: 100%;
+			background-color: $c1;
+			@include trs;
+
+			&:first-child {
+				top: 0;
+				left: auto;
+				right: 0;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				top: 9px;
+			}
+
+			&:nth-child(4) {
+				bottom: 0;
+			}
+		}
+	}
+
+	.toggle-btn-style {
+		span {
+
+			&:first-child,
+			&:nth-child(4) {
+				background-color: transparent;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				background-color: $c15;
+			}
+
+			&:first-child {
+				transform: translateX(40px);
+			}
+
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+			}
+
+			&:nth-child(4) {
+				transform: translateX(-40px);
+			}
+		}
+	}
+
+	.header__logo-company {
+		img {
+			width: 112px;
+			height: 40px;
+		}
+
+		strong {
+			display: none;
+		}
+	}
+
+	.header__phones a,
+	.header__address {
+		font-size: 1rem;
+		color: $c3;
+	}
+
+	.header__phones-wrapper {
+		svg {
+			fill: $c3;
+		}
+	}
+
+	.header__phones {
+		li:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+
+	.header__address {
+		margin-top: 26px;
+		margin-bottom: 16px;
+	}
+
+	.header__nav {
+		a {
+			display: block;
+			padding: 7px 10px;
+			font-size: fsz(20, 15);
+			font-weight: 500;
+			line-height: 1;
+
+			&:hover {
+				text-decoration: none;
 				color: $c4;
 			}
 		}
