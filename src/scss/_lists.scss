@@ -1,7 +1,16 @@
 .list-1,
-.list-2 {
+.list-2,
+.list-3 {
 	display: grid;
+}
+
+.list-1,
+.list-2 {
 	gap: 30px;
+}
+
+.list-3 {
+	gap: 53px 30px;
 }
 
 .list-1 {
@@ -10,6 +19,10 @@
 
 .list-2 {
 	grid-template-columns: repeat(4, 1fr);
+}
+
+.list-3 {
+	grid-template-columns: repeat(2, 1fr);
 }
 
 @media (max-width: 1024px) {
@@ -32,6 +45,10 @@
 	.list-2 {
 		gap: 20px;
 	}
+
+	.list-3 {
+		gap: 37px 20px;
+	}
 }
 
 @media (max-width: 360px) {
@@ -39,5 +56,9 @@
 	.list-1,
 	.list-2 {
 		gap: 15px;
+	}
+
+	.list-3 {
+		gap: 28px 15px;
 	}
 }
