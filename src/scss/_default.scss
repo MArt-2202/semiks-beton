@@ -40,7 +40,7 @@ main {
 
 @media (max-width: 1200px) {
 	main {
-		padding-top: 98px;
+		padding-top: 96px;
 	}
 }
 
@@ -151,6 +151,7 @@ h2 {
 
 @media (max-width: 1024px) {
 	h1 {
+		margin-bottom: 22px;
 		font-size: fsz(31, 15);
 	}
 }
