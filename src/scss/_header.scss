@@ -353,10 +353,14 @@ header {
 	}
 
 	.header__nav {
+		li+li {
+			margin-top: 7px;
+		}
+
 		a {
 			display: block;
 			padding: 7px 10px;
-			font-size: fsz(20, 15);
+			font-size: fsz(24, 15);
 			font-weight: 500;
 			line-height: 1;
 
