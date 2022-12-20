@@ -269,6 +269,27 @@ table {
 	margin-bottom: 40px;
 }
 
+td {
+	padding: 12px 15px;
+	font-weight: 700;
+	border: 1px solid $c13;
+	line-height: 1.25;
+}
+
+@media (max-width: 576px) {
+	td {
+		font-size: fsz(12, 14);
+	}
+}
+
+@media (max-width: 320px) {
+	td {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: fsz(10, 14);
+	}
+}
+
 picture,
 img {
 	max-width: 100%;
