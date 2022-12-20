@@ -1442,3 +1442,173 @@
 		gap: 15px;
 	}
 }
+
+/*
+=================================
+	NEWS
+=================================
+*/
+.news {
+	h2 {
+		text-align: center;
+	}
+}
+
+.news__list {
+	a {
+		position: relative;
+		display: block;
+		height: 100%;
+		color: $cb;
+
+		span {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			z-index: 1;
+			background-color: $c4;
+			padding: 9px 10px 7px 10px;
+			font-size: fsz(13, 15);
+			font-weight: 500;
+			line-height: 1;
+			color: $c1;
+
+			svg {
+				display: inline-block;
+				vertical-align: middle;
+				width: 14px;
+				height: 14px;
+				margin-right: 3px;
+				fill: $c1;
+			}
+		}
+
+		.list-img {
+			margin-bottom: 25px;
+			border-radius: 5px 5px 0 0;
+			padding-top: 58.12%;
+
+			picture {
+				transform: scale(1.05);
+				@include trs-all;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($c10, 0);
+				@include trs-all;
+			}
+		}
+
+		strong {
+			display: block;
+			font-size: fsz(25, 15);
+			font-weight: 500;
+			line-height: 1.25;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: $c4;
+
+			.list-img {
+				picture {
+					transform: scale(1);
+				}
+
+				&:after {
+					background-color: rgba($c10, 0.7);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.news__list {
+		a {
+			strong {
+				font-size: fsz(21, 15);
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.news__list {
+		a {
+			strong {
+				font-size: fsz(18, 15);
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.news__list {
+		a {
+			span {
+				top: 10px;
+				left: 10px;
+				padding: 6px 5px 4px 5px;
+				font-size: fsz(10, 14);
+
+				svg {
+					width: 10px;
+					height: 10px;
+					margin-right: 1px;
+				}
+			}
+
+			.list-img {
+				margin-bottom: 18px;
+			}
+
+			strong {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.news__list {
+		a {
+			.list-img {
+				padding-top: 65%;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.news__list {
+		a {
+			span {
+				top: 10px;
+				left: 10px;
+				padding: 6px 5px 4px 5px;
+				font-size: fsz(10, 14);
+
+				svg {
+					width: 10px;
+					height: 10px;
+					margin-right: 1px;
+				}
+			}
+
+			.list-img {
+				margin-bottom: 13px;
+			}
+
+			strong {
+				font-size: fsz(12, 14);
+			}
+		}
+	}
+}
