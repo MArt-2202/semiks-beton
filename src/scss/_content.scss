@@ -940,6 +940,10 @@
 		&:focus {
 			border-color: $c3;
 		}
+
+		&.required {
+			border-color: $c4;
+		}
 	}
 
 	.btn {
