@@ -150,8 +150,13 @@ h2 {
 }
 
 @media (max-width: 1024px) {
-	h1 {
+
+	h1,
+	h2 {
 		margin-bottom: 22px;
+	}
+
+	h1 {
 		font-size: fsz(31, 15);
 	}
 }
@@ -180,8 +185,8 @@ blockquote,
 }
 
 
-ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2),
-ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2) {
+ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2),
+ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2) {
 	li {
 		position: relative;
 		padding-left: 24px;
@@ -197,7 +202,7 @@ ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .serv
 	}
 }
 
-ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2) {
+ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2) {
 	li {
 		&:before {
 			content: '';
@@ -211,7 +216,7 @@ ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .serv
 	}
 }
 
-ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2) {
+ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2) {
 	counter-reset: num;
 
 	li {
@@ -234,7 +239,16 @@ ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .serv
 }
 
 @media (max-width: 576px) {
-	ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list) {
+
+	ul:not(.header-nav__list,
+		.header__phones,
+		.header__address,
+		.breadcrumbs,
+		.services__list,
+		.footer__list,
+		.list-1,
+		.list-2,
+		.list-3, .contacts-info__list-1, .contacts-info__list-2) {
 		li {
 			&:before {
 				font-size: fsz(8, 14);
@@ -242,7 +256,17 @@ ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .serv
 		}
 	}
 
-	ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list) {
+	ol:not(.header-nav__list,
+		.header__phones,
+		.header__address,
+		.breadcrumbs,
+		.services__list,
+		.footer__list,
+		.list-1,
+		.list-2,
+		.list-3,
+		.contacts-info__list-1,
+		.contacts-info__list-2) {
 		li:before {
 			top: 1px;
 		}
