@@ -162,7 +162,7 @@
 	&:after {
 		content: '';
 		z-index: 1;
-		background-color: rgba($c3, 0.8);
+		background: linear-gradient(180deg, $c7 0%, rgba($c7, 0.5) 100%);
 	}
 
 	.container {
@@ -186,7 +186,7 @@
 		strong {
 			display: inline-block;
 			font-weight: inherit;
-			color: $c4;
+			color: $c17;
 		}
 
 		&~p {
@@ -245,23 +245,47 @@
 	}
 
 	.icon-play {
-		padding-left: 34px;
+		position: relative;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		cursor: pointer;
+		animation: pulse 2s infinite;
+		@include trs-all;
 
 		svg {
-			width: 22px;
-			height: 22px;
+			position: relative;
+			z-index: 1;
+			width: 40px;
+			height: 40px;
 			fill: $c4;
 		}
 
-		&:before {
+		&:after {
 			content: '';
 			position: absolute;
-			top: 0;
-			left: 4px;
-			width: 14px;
-			height: 14px;
-			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 20px;
 			background-color: $c1;
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: $c15;
+		}
+	}
+}
+
+@media (min-width: 577px) {
+	.top-section__add {
+		div {
+			&:last-child {
+				padding-left: 20px;
+			}
 		}
 	}
 }
@@ -307,7 +331,14 @@
 
 @media (max-width: 576px) {
 	.top-section__add {
+		flex-direction: column;
 		gap: 20px;
+
+		div {
+			&:last-child {
+				padding-top: 20px;
+			}
+		}
 	}
 
 	.top-section__content {
@@ -343,7 +374,7 @@
 	&:after {
 		content: '';
 		z-index: 1;
-		background-color: rgba($c3, 0.8);
+		background: linear-gradient(180deg, $c7 0%, rgba($c7, 0.5) 100%);
 	}
 
 	.container {
@@ -629,7 +660,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(180deg, rgba($c3, 0) 0%, $c3 100%);
+			background: linear-gradient(180deg, $c7 0%, rgba($c7, 0.5) 100%);
 			@include trs-all;
 		}
 
@@ -637,7 +668,7 @@
 			text-decoration: none;
 
 			&:after {
-				background: linear-gradient(180deg, rgba($c3, 0) 0%, $c12 100%);
+				background: linear-gradient(180deg, $c16 0%, rgba($c16, 0.5) 100%);
 			}
 
 			.list-img+div {
