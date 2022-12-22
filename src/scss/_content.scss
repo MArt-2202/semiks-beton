@@ -339,6 +339,10 @@
 		align-items: center;
 
 		div {
+			&:not(:last-child) {
+				width: calc(min(250px, 100%));
+			}
+
 			&:last-child {
 				padding-top: 20px;
 			}
@@ -348,10 +352,6 @@
 	.top-section__content {
 		width: 100%;
 		text-align: center;
-
-		p {
-			font-size: fsz(12, 14);
-		}
 	}
 }
 
