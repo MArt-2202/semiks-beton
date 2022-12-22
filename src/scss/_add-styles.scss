@@ -123,9 +123,12 @@
 
 @media (max-width: 576px) {
 	.btn {
-		padding-top: 12px;
-		padding-bottom: 12px;
 		font-size: 1rem;
+
+		&:not(.btn-style-1) {
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
 	}
 }
 
