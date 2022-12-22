@@ -162,9 +162,9 @@
 	&:after {
 		content: '';
 		z-index: 1;
-		background: -moz-linear-gradient(bottom, rgba($c7, 0) 0%, rgba($c7, 0.8) 100%);
-		background: -webkit-linear-gradient(bottom, rgba($c7, 0) 0%, rgba($c7, 0.8) 100%);
-		background: linear-gradient(to top, rgba($c7, 0) 0%, rgba($c7, 0.8) 100%);
+		background: -moz-linear-gradient(bottom, rgba($c7, 0.3) 0%, rgba($c7, 1) 100%);
+		background: -webkit-linear-gradient(bottom, rgba($c7, 0.3) 0%, rgba($c7, 1) 100%);
+		background: linear-gradient(to top, rgba($c7, 0.3) 0%, rgba($c7, 1) 100%);
 	}
 
 	.container {
