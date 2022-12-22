@@ -51,9 +51,9 @@
 	height: 100vh;
 	opacity: 0;
 	visibility: hidden;
-	background: -moz-linear-gradient(top, rgba($c7, 0.5) 0%, rgba($c7, 0.8) 100%);
-	background: -webkit-linear-gradient(top, rgba($c7, 0.5) 0%, rgba($c7, 0.8) 100%);
-	background: linear-gradient(to bottom, rgba($c7, 0.5) 0%, rgba($c7, 0.8) 100%);
+	background: -moz-linear-gradient(top, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
+	background: -webkit-linear-gradient(top, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
+	background: linear-gradient(to bottom, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
 	pointer-events: none;
 	@include trs-all;
 }
@@ -145,8 +145,8 @@
 
 	&:hover {
 		color: $c1;
-		background-color: transparent;
-		border-color: $c1;
+		background-color: $c3;
+		border-color: $c3;
 	}
 }
 
