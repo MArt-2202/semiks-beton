@@ -1,7 +1,8 @@
 .list-1,
 .list-2,
 .list-3,
-.list-4 {
+.list-4,
+.list-5 {
 	display: grid;
 }
 
@@ -19,7 +20,8 @@
 }
 
 .list-2,
-.list-4 {
+.list-4,
+.list-5 {
 	grid-template-columns: repeat(4, 1fr);
 }
 
@@ -27,9 +29,17 @@
 	grid-template-columns: repeat(2, 1fr);
 }
 
+.list-5 {
+	gap: 15px 30px;
+}
+
 @media (max-width: 1024px) {
 	.list-2 {
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.list-5 {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
@@ -61,6 +71,11 @@
 	.list-4 {
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	.list-5 {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 15px;
+	}
 }
 
 @media (max-width: 360px) {
@@ -72,5 +87,38 @@
 
 	.list-3 {
 		gap: 28px 15px;
+	}
+}
+
+.list-style-1 {
+	li {
+		position: relative;
+		padding-left: 45px;
+		font-size: fsz(16, 15);
+		font-weight: 300;
+		line-height: 1.7;
+		color: $c1;
+
+		strong {
+			display: inline-block;
+			font-weight: 400;
+		}
+
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 25px;
+			height: 25px;
+			fill: currentColor;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.list-style-1 {
+		li {
+			font-size: 1rem;
+		}
 	}
 }
