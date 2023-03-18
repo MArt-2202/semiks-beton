@@ -41,12 +41,62 @@ export default function blockStyles() {
 		const observer = new IntersectionObserver(
 			(entries, observer) => {
 				entries.forEach((entry) => {
-					if (entry.isIntersecting && entry.target.dataset.src) {
+					if (entry.isIntersecting && entry.target.dataset.youtube) {
 						entry.target.insertAdjacentHTML(
 							'beforeend',
 							`
-									<iframe src="${entry.target.dataset.src}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								`
+								<iframe src="${entry.target.dataset.youtube}" title="YouTube video player"
+								allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+							`
+						);
+						observer.unobserve(entry.target);
+					}
+					if (
+						entry.isIntersecting &&
+						entry.target.dataset.video &&
+						entry.target.dataset.poster &&
+						entry.target.dataset.controls === 'yes'
+					) {
+						entry.target.insertAdjacentHTML(
+							'beforeend',
+							`
+								<video controls muted playsinline poster="${entry.target.dataset.poster}">
+									<source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' src="${entry.target.dataset.video}">
+								</video>
+							`
+						);
+						observer.unobserve(entry.target);
+					}
+					if (
+						entry.isIntersecting &&
+						entry.target.dataset.video &&
+						entry.target.dataset.poster &&
+						entry.target.dataset.controls === 'no'
+					) {
+						entry.target.insertAdjacentHTML(
+							'beforeend',
+							`
+								<video autoplay loop muted playsinline poster="${entry.target.dataset.poster}">
+									<source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' src="${entry.target.dataset.video}">
+								</video>
+							`
+						);
+						observer.unobserve(entry.target);
+					}
+					if (
+						(entry.isIntersecting &&
+							entry.target.dataset.video &&
+							!entry.target.dataset.poster) ||
+						entry.target.dataset.poster === ''
+					) {
+						entry.target.insertAdjacentHTML(
+							'beforeend',
+							`
+								<video controls muted playsinline>
+									<source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' src="${entry.target.dataset.video}">
+								</video>
+							`
 						);
 						observer.unobserve(entry.target);
 					}
