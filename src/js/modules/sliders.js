@@ -3,7 +3,7 @@ import Swiper, { Pagination, Autoplay } from 'swiper';
 export default function sliders() {
 	if (
 		document.querySelector('.reviews__slider') &&
-		document.querySelector('.reviews__slider .swiper-wrapper').children.length
+		document.querySelector('.reviews__slider .swiper-wrapper')?.children.length
 	) {
 		new Swiper('.reviews__slider', {
 			modules: [Pagination, Autoplay],
