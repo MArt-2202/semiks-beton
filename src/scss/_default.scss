@@ -372,17 +372,6 @@ video {
 }
 
 .video-wrapper {
-
-	iframe:not(.instagram-media),
-	iframe:not(.facebook),
-	iframe:not([id^='telegram']),
-	video {
-		margin-bottom: 0;
-		border: none;
-	}
-}
-
-.video-wrapper {
 	position: relative;
 	margin-bottom: 25px;
 	padding-top: 56.25%;
@@ -396,6 +385,8 @@ video {
 		left: 0;
 		width: 100%;
 		height: 100%;
+		margin-bottom: 0;
+		border: none;
 		object-fit: cover;
 	}
 }
