@@ -2,6 +2,7 @@
 
 import debounce from './modules/debounce';
 import blocksStyles from './modules/blocksStyles';
+import blocksStylesLoadResize from './modules/blocksStylesLoadResize';
 import blockPosition from './modules/blockPosition';
 import sliders from './modules/sliders';
 import masketInput from './modules/masketInput';
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
 	debounce(function () {
+		blocksStylesLoadResize();
 		blockPosition();
 	}, 200);
 });
@@ -53,6 +55,7 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
 	debounce(function () {
 		blocksStyles();
+		blocksStylesLoadResize();
 		blockPosition();
 	}, 200);
 });
