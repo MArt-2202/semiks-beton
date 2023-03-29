@@ -8,6 +8,7 @@ import masketInput from './modules/masketInput';
 import modal from './modules/modal';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
+import sendFormData from './modules/sendFormData';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -33,6 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	modal();
 	tableWrapper();
 	toggleContent();
+	sendFormData({
+		formWrapper: '#price-form',
+		formSubmitBtn: '#price-form__submit',
+		dataAttr: '[data-key]',
+		requiredSelector: '[required]',
+		requiredClass: 'has-required',
+		dataModal: 'modal-2',
+	});
 }); // END READY
 
 window.addEventListener('resize', () => {
