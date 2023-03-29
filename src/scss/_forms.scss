@@ -40,3 +40,123 @@ textarea {
 		opacity: 1;
 	}
 }
+
+.form {
+
+	label,
+	input:not([type='checkbox']):not([type='radio']),
+	textarea {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	label {
+		display: block;
+		padding-bottom: 5px;
+		line-height: 1;
+
+		&[data-required] {
+			span {
+				position: relative;
+				display: inline-block;
+				padding-right: 10px;
+
+				&:after {
+					content: '*';
+					position: absolute;
+					top: -1px;
+					right: 0;
+				}
+			}
+		}
+	}
+
+	input:not([type='checkbox']):not([type='radio']),
+	textarea {
+		width: 100%;
+		background-color: $c1;
+		color: $cb;
+		border: 1px solid transparent;
+		@include trs;
+
+		&:focus {
+			border-color: $c3;
+		}
+	}
+
+	input:not([type='checkbox']):not([type='radio']) {
+		height: 40px;
+	}
+
+	textarea {
+		min-height: 100px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		resize: vertical;
+		line-height: 1.2;
+	}
+
+	&.has-required {
+
+		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
+		textarea {
+			&:required {
+				border-color: $c17;
+
+				&:valid {
+					border-color: $c18;
+				}
+			}
+		}
+	}
+}
+
+.form__submit {
+	display: block;
+	padding: 13px 15px 12px 15px;
+	font-weight: 500;
+	line-height: 1;
+	color: $cb;
+	text-align: center;
+	background-color: $c5;
+	cursor: pointer;
+	@include trs;
+
+	&:hover {
+		background-color: $c3;
+		color: $c1;
+	}
+}
+
+.price-form {
+	width: calc(min(640px, 100%));
+	margin-left: auto;
+	margin-right: auto;
+
+	input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
+	textarea {
+		border-width: 2px;
+		;
+	}
+
+	label {
+		font-weight: 500;
+		color: $c1;
+		text-align: center;
+
+		&[data-required] {
+			span {
+				&:after {
+					font-weight: 500;
+					color: $c4;
+				}
+			}
+		}
+	}
+
+	.form__submit {
+		margin: 30px auto 0 auto;
+
+
+	}
+}
