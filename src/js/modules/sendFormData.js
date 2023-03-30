@@ -45,7 +45,7 @@ export default function sendFormData({
 				// 	'Content-type': 'application/json; charset=UTF-8',
 				// },
 			})
-				.then((response) => response.json())
+				// .then((response) => response.json())
 				.then((data) => {
 					document.body.style.overflowY = '';
 					document.body.style.paddingRight = '';
