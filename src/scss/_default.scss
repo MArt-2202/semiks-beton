@@ -184,8 +184,8 @@ blockquote,
 	margin-bottom: 25px;
 }
 
-ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1),
-ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
+ul:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1),
+ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
 	li {
 		position: relative;
 		padding-left: 24px;
@@ -201,7 +201,7 @@ ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .serv
 	}
 }
 
-ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
+ul:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
 	li {
 		&:before {
 			content: '';
@@ -215,7 +215,7 @@ ul:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .serv
 	}
 }
 
-ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
+ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
 	counter-reset: num;
 
 	li {
@@ -242,6 +242,7 @@ ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .serv
 	ul:not(.header-nav__list,
 		.header__phones,
 		.header__address,
+		header__s_ocial,
 		.breadcrumbs,
 		.services__list,
 		.footer__list,
@@ -258,6 +259,7 @@ ol:not(.header-nav__list, .header__phones, .header__address, .breadcrumbs, .serv
 	ol:not(.header-nav__list,
 		.header__phones,
 		.header__address,
+		.header__s_ocial,
 		.breadcrumbs,
 		.services__list,
 		.footer__list,
@@ -387,6 +389,87 @@ video {
 		margin-bottom: 0;
 		border: none;
 		object-fit: cover;
+	}
+}
+
+.s_ocial {
+
+	li,
+	a {
+		display: inline-block;
+	}
+
+	li {
+		vertical-align: middle;
+	}
+
+	a {
+		color: $c1;
+		text-decoration: none;
+
+		&.s_ocial__y_outube {
+			width: 20px;
+			height: 14px;
+
+			&:hover {
+				color: $c19;
+			}
+		}
+
+		&.s_ocial__f_acebook {
+			width: 10px;
+			height: 20px;
+
+			&:hover {
+				color: $c20;
+			}
+		}
+
+		&.s_ocial__t_elegram {
+			width: 20px;
+			height: 17px;
+
+			&:hover {
+				color: $c21;
+			}
+		}
+
+
+		&.s_ocial__i_nstagram,
+		&.s_ocial__v_iber,
+		&.s_ocial__w_hatsapp {
+			width: 20px;
+			height: 20px;
+		}
+
+		&.s_ocial__i_nstagram {
+			&:hover {
+				color: $c24;
+			}
+		}
+
+		&.s_ocial__v_iber {
+			&:hover {
+				color: $c22;
+			}
+		}
+
+		&.s_ocial__w_hatsapp {
+			&:hover {
+				color: $c23;
+			}
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+			fill: currentColor;
+			@include trs;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
