@@ -81,6 +81,18 @@ header {
 .header__address {
 	font-weight: 400;
 	line-height: 1.25;
+
+	&+.header__s_ocial {
+		margin-top: 10px;
+	}
+}
+
+.header__s_ocial {
+	li {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
 }
 
 @media (min-width: 1201px) {
@@ -196,7 +208,11 @@ header {
 
 	.header__bl-2,
 	.header__bl-3,
-	.header__bl-4 {
+	.header__bl-4,
+	.header__nav,
+	.header__phones-wrapper,
+	.header__address,
+	.header__s_ocial {
 		display: none;
 	}
 
@@ -213,7 +229,8 @@ header {
 
 		.header__nav,
 		.header__phones-wrapper,
-		.header__address {
+		.header__address,
+		.header__s_ocial {
 			display: block;
 
 		}
@@ -326,6 +343,16 @@ header {
 
 		strong {
 			display: none;
+		}
+	}
+
+	.header__s_ocial {
+		a {
+			color: $c3;
+		}
+
+		&+.header__phones-wrapper {
+			margin-top: 28px;
 		}
 	}
 
