@@ -1,3 +1,6 @@
+@use 'mixins';
+@use 'sass:color';
+
 /*
 =================================
 	CONTENT BLOCKS
@@ -23,7 +26,7 @@
 
 	.content-1__aside {
 		flex: none;
-		width: mp(450, 1080);
+		width: mixins.mp(450, 1080);
 	}
 
 	.content-2__main,
@@ -56,7 +59,7 @@
 
 .info-1 {
 	h2 {
-		font-size: fsz(38, 15);
+		font-size: mixins.fsz(38, 15);
 	}
 
 	p {
@@ -68,7 +71,7 @@
 
 .info-style-1 {
 	position: relative;
-	color: $c1;
+	color: var(--c1);
 
 	.list-5 {
 		margin-bottom: 0;
@@ -92,13 +95,13 @@
 
 		h2 {
 			margin-bottom: 55px;
-			font-size: fsz(32, 15);
+			font-size: mixins.fsz(32, 15);
 			line-height: 1.25;
 		}
 
 		>strong {
 			display: block;
-			font-size: fsz(22, 15);
+			font-size: mixins.fsz(22, 15);
 			font-weight: 400;
 			line-height: 1.35;
 		}
@@ -119,16 +122,16 @@
 	&:after {
 		content: '';
 		z-index: 1;
-		background-color: rgba($c10, 0.8);
+		background-color: rgba(#030D28, 0.8);
 	}
 }
 
 .info-style-3 {
 	position: relative;
-	background: $c2;
-	background: -moz-linear-gradient(0deg, rgba($c2, 1) 0%, rgba(255, 255, 255, 1) 100%);
-	background: -webkit-linear-gradient(0deg, rgba($c2, 1) 0%, rgba(255, 255, 255, 1) 100%);
-	background: linear-gradient(0deg, rgba($c2, 1) 0%, rgba(255, 255, 255, 1) 100%);
+	background: var(--c2);
+	background: -moz-linear-gradient(0deg, rgba(#000000, 1) 0%, rgba(255, 255, 255, 1) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(#000000, 1) 0%, rgba(255, 255, 255, 1) 100%);
+	background: linear-gradient(0deg, rgba(#000000, 1) 0%, rgba(255, 255, 255, 1) 100%);
 
 	&:after {
 		content: '';
@@ -137,7 +140,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba($c10, 0.8);
+		background-color: rgba(#030D28, 0.8);
 	}
 
 	.container {
@@ -151,7 +154,7 @@
 		.container {
 			h2 {
 				margin-bottom: 30px;
-				font-size: fsz(31, 15);
+				font-size: mixins.fsz(31, 15);
 			}
 		}
 
@@ -176,7 +179,7 @@
 	.info-style-1 {
 		.container {
 			h2 {
-				font-size: fsz(31, 14);
+				font-size: mixins.fsz(31, 14);
 			}
 
 			>strong {
@@ -190,7 +193,7 @@
 	.reviews {
 		.container {
 			h2 {
-				font-size: fsz(29, 14);
+				font-size: mixins.fsz(29, 14);
 			}
 		}
 	}
@@ -199,7 +202,7 @@
 @media (max-width: 1024px) {
 	.info-1 {
 		h2 {
-			font-size: fsz(31, 15);
+			font-size: mixins.fsz(31, 15);
 		}
 	}
 }
@@ -207,7 +210,7 @@
 @media (max-width: 576px) {
 	.info-1 {
 		h2 {
-			font-size: fsz(31, 14);
+			font-size: mixins.fsz(31, 14);
 		}
 	}
 }
@@ -215,15 +218,15 @@
 @media (max-width: 415px) {
 	.info-1 {
 		h2 {
-			font-size: fsz(29, 14);
+			font-size: mixins.fsz(29, 14);
 		}
 	}
 }
 
 @keyframes pulse {
 	50% {
-		box-shadow: 0 0 0 5px rgba($c1, 0.1),
-			0 0 0 20px rgba($c14, 0.3);
+		box-shadow: 0 0 0 5px rgba(#FFFFFF, 0.1),
+			0 0 0 20px rgba(#EEEEEE, 0.3);
 	}
 }
 
@@ -245,14 +248,14 @@
 		border-radius: 50%;
 		cursor: pointer;
 		animation: pulse 2s infinite;
-		@include trs-all;
+		@include mixins.trs;
 
 		svg {
 			position: relative;
 			z-index: 1;
 			width: 55px;
 			height: 55px;
-			fill: $c4;
+			fill: var(--c4);
 		}
 
 		&:after {
@@ -263,11 +266,11 @@
 			transform: translate(-50%, -50%);
 			width: 20px;
 			height: 20px;
-			background-color: $c1;
+			background-color: var(--c1);
 		}
 
 		&:hover {
-			background-color: $c15;
+			background-color: var(--c15);
 		}
 	}
 }
@@ -293,9 +296,9 @@
 	&:after {
 		content: '';
 		z-index: 1;
-		background: -moz-linear-gradient(bottom, rgba($c7, 0.3) 0%, rgba($c7, 1) 100%);
-		background: -webkit-linear-gradient(bottom, rgba($c7, 0.3) 0%, rgba($c7, 1) 100%);
-		background: linear-gradient(to top, rgba($c7, 0.3) 0%, rgba($c7, 1) 100%);
+		background: -moz-linear-gradient(bottom, rgba(#030e27, 0.3) 0%, rgba(#030e27, 1) 100%);
+		background: -webkit-linear-gradient(bottom, rgba(#030e27, 0.3) 0%, rgba(#030e27, 1) 100%);
+		background: linear-gradient(to top, rgba(#030e27, 0.3) 0%, rgba(#030e27, 1) 100%);
 	}
 
 	.container {
@@ -313,7 +316,7 @@
 }
 
 .top-section__content {
-	color: $c1;
+	color: var(--c1);
 
 	h1 {
 		margin-bottom: 28px;
@@ -324,7 +327,7 @@
 		strong {
 			display: inline-block;
 			font-weight: inherit;
-			color: $c17;
+			color: var(--c17);
 		}
 
 		&~p {
@@ -333,7 +336,7 @@
 	}
 
 	p {
-		font-size: fsz(12, 15);
+		font-size: mixins.fsz(12, 15);
 		font-weight: 300;
 		line-height: 1.45;
 
@@ -391,14 +394,14 @@
 		border-radius: 50%;
 		cursor: pointer;
 		animation: pulse 2s infinite;
-		@include trs-all;
+		@include mixins.trs;
 
 		svg {
 			position: relative;
 			z-index: 1;
 			width: 40px;
 			height: 40px;
-			fill: $c4;
+			fill: var(--c4);
 		}
 
 		&:after {
@@ -409,12 +412,12 @@
 			transform: translate(-50%, -50%);
 			width: 20px;
 			height: 20px;
-			background-color: $c1;
+			background-color: var(--c1);
 		}
 
 		&:hover {
 			text-decoration: none;
-			background-color: $c15;
+			background-color: var(--c15);
 		}
 	}
 }
@@ -517,7 +520,7 @@
 	&:after {
 		content: '';
 		z-index: 1;
-		background-color: rgba($c10, 0.8);
+		background-color: rgba(#030D28, 0.8);
 	}
 
 	.container {
@@ -533,10 +536,10 @@
 
 		>strong {
 			display: block;
-			font-size: fsz(14, 15);
+			font-size: mixins.fsz(14, 15);
 			font-weight: 300;
 			line-height: 1;
-			color: $c4;
+			color: var(--c4);
 			text-transform: uppercase;
 
 			&+h2 {
@@ -546,10 +549,10 @@
 
 		h2 {
 			margin-bottom: 64px;
-			font-size: fsz(32, 15);
+			font-size: mixins.fsz(32, 15);
 			font-weight: 500;
 			line-height: 1.25;
-			color: $c1;
+			color: var(--c1);
 		}
 	}
 }
@@ -559,12 +562,12 @@
 		position: relative;
 		margin-bottom: 40px;
 		padding: 40px 35px;
-		font-size: fsz(18, 15);
+		font-size: mixins.fsz(18, 15);
 		font-weight: 300;
 		line-height: 1.45;
-		color: rgba($c1, 0.85);
-		background-color: rgba($c10, 0.30);
-		border: 1px solid $c9;
+		color: rgba(#FFFFFF, 0.85);
+		background-color: rgba(#030D28, 0.3);
+		border: 1px solid var(--c9);
 		border-radius: 7px;
 
 		svg {
@@ -573,7 +576,7 @@
 			right: 30px;
 			width: 30px;
 			height: 26px;
-			fill: $c4;
+			fill: var(--c4);
 		}
 
 		&:after {
@@ -583,8 +586,8 @@
 			height: 15px;
 			left: 35px;
 			top: 100%;
-			background-color: rgba($c10, 0.30);
-			border: 1px solid $c9;
+			background-color: rgba(#030D28, 0.3);
+			border: 1px solid var(--c9);
 			border-top: none;
 			clip-path: polygon(0 0, 0% 100%, 100% 0);
 		}
@@ -611,7 +614,7 @@
 		display: inline-block;
 		width: 60px;
 		height: 60px;
-		background-color: $c4;
+		background-color: var(--c4);
 		border-radius: 50%;
 
 		svg {
@@ -621,13 +624,13 @@
 			transform: translate(-50%, -50%);
 			width: 30px;
 			height: 34px;
-			fill: $c1;
+			fill: var(--c1);
 		}
 	}
 
 	p {
-		font-size: fsz(16, 15);
-		color: rgba($c1, 0.35);
+		font-size: mixins.fsz(16, 15);
+		color: rgba(#FFFFFF, 0.35);
 
 		&:last-child {
 			margin-bottom: 0;
@@ -636,10 +639,10 @@
 		strong {
 			display: block;
 			margin-bottom: 8px;
-			font-size: fsz(18, 15);
+			font-size: mixins.fsz(18, 15);
 			font-weight: 500;
 			line-height: 1.2;
-			color: $c1;
+			color: var(--c1);
 		}
 	}
 }
@@ -660,9 +663,9 @@
 		height: 6px;
 		margin-right: 6px;
 		border-radius: 3px;
-		background-color: $c11;
+		background-color: var(--c11);
 		opacity: 1;
-		@include trs-all;
+		@include mixins.trs;
 
 		&:last-child {
 			margin-right: 0;
@@ -670,7 +673,7 @@
 
 		&.swiper-pagination-bullet-active {
 			width: 95px;
-			background-color: $c4;
+			background-color: var(--c4);
 		}
 	}
 }
@@ -680,7 +683,7 @@
 		.container {
 			h2 {
 				margin-bottom: 30px;
-				font-size: fsz(31, 15);
+				font-size: mixins.fsz(31, 15);
 			}
 		}
 	}
@@ -699,7 +702,7 @@
 	.reviews {
 		.container {
 			h2 {
-				font-size: fsz(31, 14);
+				font-size: mixins.fsz(31, 14);
 			}
 
 			>strong {
@@ -711,7 +714,7 @@
 	.reviews-slider__item {
 		blockquote {
 			padding: 34px 20px;
-			font-size: fsz(18, 14);
+			font-size: mixins.fsz(18, 14);
 
 			svg {
 				right: 20px;
@@ -725,10 +728,10 @@
 
 	.reviews-slider__author {
 		p {
-			font-size: fsz(16, 14);
+			font-size: mixins.fsz(16, 14);
 
 			strong {
-				font-size: fsz(18, 14);
+				font-size: mixins.fsz(18, 14);
 			}
 		}
 	}
@@ -738,7 +741,7 @@
 	.reviews {
 		.container {
 			h2 {
-				font-size: fsz(29, 14);
+				font-size: mixins.fsz(29, 14);
 			}
 		}
 	}
@@ -753,7 +756,7 @@
 
 	.reviews-slider__item {
 		blockquote {
-			font-size: fsz(16, 14);
+			font-size: mixins.fsz(16, 14);
 		}
 	}
 
@@ -762,7 +765,7 @@
 			font-size: 1rem;
 
 			strong {
-				font-size: fsz(16, 14);
+				font-size: mixins.fsz(16, 14);
 			}
 		}
 	}
@@ -796,7 +799,7 @@
 		}
 
 		p {
-			font-size: fsz(12, 14);
+			font-size: mixins.fsz(12, 14);
 
 			strong {
 				font-size: 1rem;
@@ -823,7 +826,7 @@
 		position: relative;
 		display: block;
 		height: 100%;
-		color: $c1;
+		color: var(--c1);
 
 		&:after {
 			content: '';
@@ -832,10 +835,10 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: -moz-linear-gradient(top, rgba($c7, 0) 0%, rgba($c7, 1) 100%);
-			background: -webkit-linear-gradient(top, rgba($c7, 0) 0%, rgba($c7, 1) 100%);
-			background: linear-gradient(to bottom, rgba($c7, 0) 0%, rgba($c7, 1) 100%);
-			@include trs-all;
+			background: -moz-linear-gradient(top, rgba(#030e27, 0) 0%, rgba(#030e27, 1) 100%);
+			background: -webkit-linear-gradient(top, rgba(#030e27, 0) 0%, rgba(#030e27, 1) 100%);
+			background: linear-gradient(to bottom, rgba(#030e27, 0) 0%, rgba(#030e27, 1) 100%);
+			@include mixins.trs;
 		}
 
 		&:hover {
@@ -853,24 +856,24 @@
 		&+div {
 			position: absolute;
 			z-index: 1;
-			left: mp(30, 300);
-			right: mp(30, 300);
+			left: mixins.mp(30, 300);
+			right: mixins.mp(30, 300);
 			bottom: 28px;
-			@include trs-all;
+			@include mixins.trs;
 		}
 	}
 
 	strong {
 		display: block;
 		margin-bottom: 10px;
-		font-size: fsz(14, 15);
+		font-size: mixins.fsz(14, 15);
 		font-weight: 700;
 		line-height: 1.2;
-		color: $c17;
+		color: var(--c17);
 	}
 
 	p {
-		font-size: fsz(12, 15);
+		font-size: mixins.fsz(12, 15);
 		line-height: 1.25;
 
 		&:last-child {
@@ -915,7 +918,7 @@
 		}
 
 		p {
-			font-size: fsz(12, 14);
+			font-size: mixins.fsz(12, 14);
 		}
 	}
 }
@@ -940,11 +943,11 @@
 
 		strong {
 			margin-bottom: 5px;
-			font-size: fsz(12, 14);
+			font-size: mixins.fsz(12, 14);
 		}
 
 		p {
-			font-size: fsz(10, 14);
+			font-size: mixins.fsz(10, 14);
 		}
 	}
 }
@@ -968,11 +971,11 @@
 		}
 
 		strong {
-			font-size: fsz(11, 14);
+			font-size: mixins.fsz(11, 14);
 		}
 
 		p {
-			font-size: fsz(9, 14);
+			font-size: mixins.fsz(9, 14);
 		}
 	}
 }
@@ -985,7 +988,7 @@
 .selection-steps {
 	h2 {
 		display: inline-block;
-		font-size: fsz(38, 15);
+		font-size: mixins.fsz(38, 15);
 		text-align: right;
 	}
 }
@@ -1001,7 +1004,7 @@
 @media (max-width: 1024px) {
 	.selection-steps {
 		h2 {
-			font-size: fsz(31, 15);
+			font-size: mixins.fsz(31, 15);
 		}
 	}
 }
@@ -1009,7 +1012,7 @@
 @media (max-width: 576px) {
 	.selection-steps {
 		h2 {
-			font-size: fsz(31, 14);
+			font-size: mixins.fsz(31, 14);
 		}
 	}
 }
@@ -1017,7 +1020,7 @@
 @media (max-width: 415px) {
 	.selection-steps {
 		h2 {
-			font-size: fsz(29, 14);
+			font-size: mixins.fsz(29, 14);
 		}
 	}
 }
@@ -1029,7 +1032,7 @@
 		position: relative;
 		display: block;
 		height: 100%;
-		color: $c1;
+		color: var(--c1);
 
 		&:after {
 			content: '';
@@ -1038,8 +1041,8 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(180deg, rgba($c3, 0) 0%, $c3 100%);
-			@include trs-all;
+			background: linear-gradient(180deg, rgba(#162B73, 0) 0%, #162B73 100%);
+			@include mixins.trs;
 		}
 
 		&:hover {
@@ -1057,19 +1060,19 @@
 		&+div {
 			position: absolute;
 			z-index: 1;
-			left: mp(25, 278);
-			right: mp(25, 278);
+			left: mixins.mp(25, 278);
+			right: mixins.mp(25, 278);
 			bottom: 22px;
-			@include trs-all;
+			@include mixins.trs;
 		}
 	}
 
 	strong {
 		display: block;
-		font-size: fsz(16, 15);
+		font-size: mixins.fsz(16, 15);
 		font-weight: 700;
 		line-height: 1.25;
-		color: $c1;
+		color: var(--c1);
 	}
 }
 
@@ -1116,7 +1119,7 @@
 		}
 
 		strong {
-			font-size: fsz(12, 14);
+			font-size: mixins.fsz(12, 14);
 		}
 	}
 }
@@ -1140,7 +1143,7 @@
 		}
 
 		strong {
-			font-size: fsz(11, 14);
+			font-size: mixins.fsz(11, 14);
 		}
 	}
 }
@@ -1154,7 +1157,7 @@
 	li {
 		display: flex;
 		flex-direction: column;
-		border: 1px solid $c5;
+		border: 1px solid var(--c5);
 	}
 
 	a {
@@ -1165,14 +1168,14 @@
 			text-decoration: none;
 
 			strong {
-				color: $c4;
+				color: var(--c4);
 			}
 		}
 	}
 
 	.list-img-2 {
 		padding-top: 100%;
-		border-bottom: 1px solid $c5;
+		border-bottom: 1px solid var(--c5);
 
 		div {
 			top: 15px;
@@ -1196,25 +1199,25 @@
 
 	strong {
 		margin-bottom: 10px;
-		font-size: fsz(16, 15);
+		font-size: mixins.fsz(16, 15);
 		font-weight: 700;
 		line-height: 1.2;
-		@include trs-all;
+		@include mixins.trs;
 	}
 
 	span {
 		margin-top: auto;
-		font-size: fsz(14, 15);
+		font-size: mixins.fsz(14, 15);
 		font-weight: 500;
 		line-height: 1;
-		color: $c6;
+		color: var(--c6);
 	}
 }
 
 @media (max-width: 576px) {
 	.products-list {
 		strong {
-			font-size: fsz(16, 14);
+			font-size: mixins.fsz(16, 14);
 		}
 
 		span {
@@ -1231,7 +1234,7 @@
 		}
 
 		span {
-			font-size: fsz(12, 14);
+			font-size: mixins.fsz(12, 14);
 		}
 	}
 }
@@ -1239,11 +1242,11 @@
 @media (max-width: 320px) {
 	.products-list {
 		strong {
-			font-size: fsz(12, 14);
+			font-size: mixins.fsz(12, 14);
 		}
 
 		span {
-			font-size: fsz(10, 14);
+			font-size: mixins.fsz(10, 14);
 		}
 	}
 }
@@ -1267,7 +1270,7 @@
 .product-details__add {
 	margin-bottom: 20px;
 	padding: 17px 20px 20px 20px;
-	border: 1px solid $c13;
+	border: 1px solid var(--c13);
 	border-radius: 5px;
 
 	h2 {
@@ -1303,16 +1306,16 @@
 		height: 40px;
 		padding-right: 15px;
 		border-radius: 5px;
-		background-color: rgba($c11, 0.5);
+		background-color: rgba(#d9d9d9, 0.5);
 		border: 1px solid transparent;
-		@include trs-all;
+		@include mixins.trs;
 
 		&:focus {
-			border-color: $c3;
+			border-color: var(--c3);
 		}
 
 		&.required {
-			border-color: $c4;
+			border-color: var(--c4);
 		}
 	}
 
@@ -1375,8 +1378,8 @@
 */
 .contacts-list {
 	li {
-		font-size: fsz(16, 15);
-		color: $c8;
+		font-size: mixins.fsz(16, 15);
+		color: var(--c8);
 		text-align: center;
 
 		p {
@@ -1393,7 +1396,7 @@
 		display: inline-block;
 		width: 50px;
 		height: 50px;
-		color: $c4;
+		color: var(--c4);
 
 		svg {
 			position: absolute;
@@ -1423,7 +1426,7 @@
 		display: block;
 		margin-top: 23px;
 		margin-bottom: 18px;
-		font-size: fsz(24, 15);
+		font-size: mixins.fsz(24, 15);
 		font-weight: 400;
 		line-height: 1.2;
 	}
@@ -1433,11 +1436,11 @@
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		color: $c8;
+		color: var(--c8);
 
 		&:hover {
 			text-decoration: none;
-			color: $c4;
+			color: var(--c4);
 		}
 	}
 }
@@ -1449,7 +1452,7 @@
 		}
 
 		strong {
-			font-size: fsz(20, 15);
+			font-size: mixins.fsz(20, 15);
 		}
 	}
 }
@@ -1465,7 +1468,7 @@
 		gap: 40px 20px;
 
 		strong {
-			font-size: fsz(18, 14);
+			font-size: mixins.fsz(18, 14);
 		}
 	}
 }
@@ -1481,18 +1484,18 @@
 		gap: 40px 15px;
 
 		li {
-			font-size: fsz(12, 14);
+			font-size: mixins.fsz(12, 14);
 		}
 
 		strong {
-			font-size: fsz(16, 14);
+			font-size: mixins.fsz(16, 14);
 		}
 	}
 }
 
 .contacts-info {
 	h2 {
-		font-size: fsz(24, 15);
+		font-size: mixins.fsz(24, 15);
 		font-weight: 500;
 		text-transform: uppercase;
 	}
@@ -1505,7 +1508,7 @@
 .contacts-info__list-1,
 .contacts-info__list-2 {
 	li {
-		color: $c8;
+		color: var(--c8);
 	}
 }
 
@@ -1513,7 +1516,7 @@
 	margin-bottom: 40px;
 
 	li {
-		font-size: fsz(18, 15);
+		font-size: mixins.fsz(18, 15);
 		font-weight: 300;
 		line-height: 1;
 
@@ -1529,7 +1532,7 @@
 	li {
 		position: relative;
 		padding-left: 50px;
-		font-size: fsz(16, 15);
+		font-size: mixins.fsz(16, 15);
 		line-height: 1.6;
 
 		&:not(:last-child) {
@@ -1541,7 +1544,7 @@
 			left: 0;
 			top: 50%;
 			transform: translateY(-50%);
-			fill: $c2;
+			fill: var(--c2);
 
 			&.icon-location {
 				width: 30px;
@@ -1563,11 +1566,11 @@
 	a {
 		display: table;
 		max-width: 100%;
-		color: $c8;
+		color: var(--c8);
 
 		&:hover {
 			text-decoration: none;
-			color: $c4;
+			color: var(--c4);
 		}
 	}
 }
@@ -1575,13 +1578,13 @@
 @media (max-width: 768px) {
 	.contacts-info {
 		h2 {
-			font-size: fsz(20, 15);
+			font-size: mixins.fsz(20, 15);
 		}
 	}
 
 	.contacts-info__list-1 {
 		li {
-			font-size: fsz(16, 15);
+			font-size: mixins.fsz(16, 15);
 		}
 	}
 
@@ -1595,13 +1598,13 @@
 @media (max-width: 576px) {
 	.contacts-info {
 		h2 {
-			font-size: fsz(18, 14);
+			font-size: mixins.fsz(18, 14);
 		}
 	}
 
 	.contacts-info__list-1 {
 		li {
-			font-size: fsz(16, 14);
+			font-size: mixins.fsz(16, 14);
 		}
 	}
 }
@@ -1609,7 +1612,7 @@
 @media (max-width: 360px) {
 	.contacts-info {
 		h2 {
-			font-size: fsz(16, 14);
+			font-size: mixins.fsz(16, 14);
 		}
 	}
 
@@ -1622,7 +1625,7 @@
 	.contacts-info__list-2 {
 
 		li {
-			font-size: fsz(12, 14);
+			font-size: mixins.fsz(12, 14);
 		}
 	}
 }
@@ -1635,13 +1638,13 @@
 .about__add,
 .about__info {
 	h2 {
-		font-size: fsz(38, 15);
+		font-size: mixins.fsz(38, 15);
 		font-weight: 500;
 	}
 }
 
 .about__add {
-	background-color: $c4;
+	background-color: var(--c4);
 
 	.container {
 		display: flex;
@@ -1663,7 +1666,7 @@
 					transform: translateY(-50%);
 					width: 70px;
 					height: 70px;
-					fill: $c1;
+					fill: var(--c1);
 					opacity: 0.1;
 				}
 			}
@@ -1675,7 +1678,7 @@
 		z-index: 1;
 		margin-bottom: 0;
 		line-height: 1;
-		color: $c1;
+		color: var(--c1);
 	}
 
 	.btn {
@@ -1698,14 +1701,14 @@
 		&.btn-info-2 {
 			span {
 				svg {
-					fill: $c4;
+					fill: var(--c4);
 				}
 			}
 
 			&:hover {
 				span {
 					svg {
-						fill: $c1;
+						fill: var(--c1);
 					}
 				}
 			}
@@ -1716,7 +1719,7 @@
 .about__add,
 .about__info {
 	h2 {
-		font-size: fsz(38, 15);
+		font-size: mixins.fsz(38, 15);
 		font-weight: 500;
 	}
 }
@@ -1731,20 +1734,20 @@
 
 		span {
 			display: inline-block;
-			color: $c4;
+			color: var(--c4);
 		}
 
 		&+a {
 			display: table;
 			margin-left: auto;
 			margin-right: auto;
-			font-size: fsz(38, 15);
+			font-size: mixins.fsz(38, 15);
 			font-weight: 500;
 			line-height: 1.25;
 
 			&:hover {
 				text-decoration: none;
-				color: $c4;
+				color: var(--c4);
 			}
 		}
 	}
@@ -1775,7 +1778,7 @@
 	.about__add h2,
 	.about__info h2,
 	.about__info h2+a {
-		font-size: fsz(31, 15);
+		font-size: mixins.fsz(31, 15);
 	}
 }
 
@@ -1784,7 +1787,7 @@
 	.about__add h2,
 	.about__info h2,
 	.about__info h2+a {
-		font-size: fsz(31, 14);
+		font-size: mixins.fsz(31, 14);
 	}
 
 	.about__add {
@@ -1799,7 +1802,7 @@
 	.about__add h2,
 	.about__info h2,
 	.about__info h2+a {
-		font-size: fsz(31, 29);
+		font-size: mixins.fsz(31, 29);
 	}
 
 	.about__certificates {
@@ -1835,19 +1838,19 @@
 		position: relative;
 		display: block;
 		height: 100%;
-		color: $cb;
+		color: var(--cb);
 
 		span {
 			position: absolute;
 			top: 20px;
 			left: 20px;
 			z-index: 1;
-			background-color: $c4;
+			background-color: var(--c4);
 			padding: 9px 10px 7px 10px;
-			font-size: fsz(13, 15);
+			font-size: mixins.fsz(13, 15);
 			font-weight: 500;
 			line-height: 1;
-			color: $c1;
+			color: var(--c1);
 
 			svg {
 				display: inline-block;
@@ -1855,7 +1858,7 @@
 				width: 14px;
 				height: 14px;
 				margin-right: 3px;
-				fill: $c1;
+				fill: var(--c1);
 			}
 		}
 
@@ -1866,7 +1869,7 @@
 
 			picture {
 				transform: scale(1.05);
-				@include trs-all;
+				@include mixins.trs;
 			}
 
 			&:after {
@@ -1876,21 +1879,21 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: rgba($c10, 0);
-				@include trs-all;
+				background-color: rgba(#030D28, 0);
+				@include mixins.trs;
 			}
 		}
 
 		strong {
 			display: block;
-			font-size: fsz(25, 15);
+			font-size: mixins.fsz(25, 15);
 			font-weight: 500;
 			line-height: 1.25;
 		}
 
 		&:hover {
 			text-decoration: none;
-			color: $c4;
+			color: var(--c4);
 
 			.list-img {
 				picture {
@@ -1898,7 +1901,7 @@
 				}
 
 				&:after {
-					background-color: rgba($c10, 0.7);
+					background-color: rgba(#030D28, 0.7);
 				}
 			}
 		}
@@ -1909,7 +1912,7 @@
 	.news__list {
 		a {
 			strong {
-				font-size: fsz(21, 15);
+				font-size: mixins.fsz(21, 15);
 			}
 		}
 	}
@@ -1919,7 +1922,7 @@
 	.news__list {
 		a {
 			strong {
-				font-size: fsz(18, 15);
+				font-size: mixins.fsz(18, 15);
 			}
 		}
 	}
@@ -1932,7 +1935,7 @@
 				top: 10px;
 				left: 10px;
 				padding: 6px 5px 4px 5px;
-				font-size: fsz(10, 14);
+				font-size: mixins.fsz(10, 14);
 
 				svg {
 					width: 10px;
@@ -1969,7 +1972,7 @@
 				top: 10px;
 				left: 10px;
 				padding: 6px 5px 4px 5px;
-				font-size: fsz(10, 14);
+				font-size: mixins.fsz(10, 14);
 
 				svg {
 					width: 10px;
@@ -1983,7 +1986,7 @@
 			}
 
 			strong {
-				font-size: fsz(12, 14);
+				font-size: mixins.fsz(12, 14);
 			}
 		}
 	}
