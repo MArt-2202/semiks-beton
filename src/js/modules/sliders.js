@@ -1,4 +1,5 @@
-import Swiper, { Pagination, Autoplay } from 'swiper';
+import Swiper from 'swiper';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 export default function sliders() {
 	if (
