@@ -1,12 +1,46 @@
+@use 'mixins';
+@use 'sass:color';
+
 :root {
-	font: $fsb $fb;
-	color: $cb;
+	--fb: Montserrat,
+		'Helvetica CY',
+		'Nimbus Sans L',
+		sans-serif;
+	font: 0.9325em var(--fb); // 15 / 16px
+
+	--cb: #111111;
+	--c1: #ffffff;
+	--c2: #000000;
+	--c3: #162B73;
+	--c4: #BA0913;
+	--c5: #e5e5e7;
+	--c6: #dc3545;
+	--c7: #030e27;
+	--c8: #798795;
+	--c9: #22283c;
+	--c10: #030D28;
+	--c11: #d9d9d9;
+	--c12: #12245E;
+	--c13: #B3B3B3;
+	--c14: #EEEEEE;
+	--c15: #A1080F;
+	--c16: #05163D;
+	--c17: #FE1212;
+	--c18: #1BD741;
+	--c19: #FF0000;
+	--c20: #0675E7;
+	--c21: #23A0DD;
+	--c22: #7360F2;
+	--c23: #36BB22;
+	--c24: #F500B0;
+
+	color: --cb;
 	box-sizing: border-box;
 }
 
 @media (max-width: 576px) {
 	:root {
-		font-size: fsz(14, 16);
+		font-size: mixins.fsz(14, 16);
 	}
 }
 
@@ -62,8 +96,8 @@ h6::selection,
 p::selection,
 li::selection,
 input:not([type='checkbox']):not([type='radio'])::selection {
-	color: $c1;
-	background-color: $cb;
+	color: var(--c1);
+	background-color: var(--cb);
 }
 
 .container,
@@ -87,29 +121,29 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 @media (max-width: 1230px) {
 	.container {
-		padding-left: mp(50, 1200);
-		padding-right: mp(50, 1200);
+		padding-left: mixins.mp(50, 1200);
+		padding-right: mixins.mp(50, 1200);
 	}
 }
 
 @media (max-width: 1024px) {
 	.container {
-		padding-left: mp(40, 1024);
-		padding-right: mp(40, 1024);
+		padding-left: mixins.mp(40, 1024);
+		padding-right: mixins.mp(40, 1024);
 	}
 }
 
 @media (max-width: 990px) {
 	.container-md {
-		padding-left: mp(50, 1200);
-		padding-right: mp(50, 1200);
+		padding-left: mixins.mp(50, 1200);
+		padding-right: mixins.mp(50, 1200);
 	}
 }
 
 @media (max-width: 830px) {
 	.container-sm {
-		padding-left: mp(50, 1200);
-		padding-right: mp(50, 1200);
+		padding-left: mixins.mp(50, 1200);
+		padding-right: mixins.mp(50, 1200);
 	}
 }
 
@@ -141,7 +175,7 @@ h3 {
 
 h1 {
 	margin-bottom: 45px;
-	font-size: fsz(38, 15);
+	font-size: mixins.fsz(38, 15);
 }
 
 h2 {
@@ -157,23 +191,23 @@ h2 {
 	}
 
 	h1 {
-		font-size: fsz(31, 15);
+		font-size: mixins.fsz(31, 15);
 	}
 }
 
 @media (max-width: 576px) {
 	h1 {
-		font-size: fsz(31, 14);
+		font-size: mixins.fsz(31, 14);
 	}
 
 	h2 {
-		font-size: fsz(15, 14);
+		font-size: mixins.fsz(15, 14);
 	}
 }
 
 @media (max-width: 415px) {
 	h1 {
-		font-size: fsz(29, 14);
+		font-size: mixins.fsz(29, 14);
 	}
 }
 
@@ -184,8 +218,8 @@ blockquote,
 	margin-bottom: 25px;
 }
 
-ul:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1),
-ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
+ul:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1, .header__lang),
+ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1, .header__lang) {
 	li {
 		position: relative;
 		padding-left: 24px;
@@ -201,7 +235,7 @@ ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .
 	}
 }
 
-ul:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
+ul:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1, .header__lang) {
 	li {
 		&:before {
 			content: '';
@@ -209,13 +243,13 @@ ul:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .
 			left: 6px;
 			width: 4px;
 			height: 4px;
-			background-color: $cb;
+			background-color: var(--cb);
 			border-radius: 50%;
 		}
 	}
 }
 
-ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
+ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .breadcrumbs, .services__list, .footer__list, .list-1, .list-2, .list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1, .header__lang) {
 	counter-reset: num;
 
 	li {
@@ -226,11 +260,11 @@ ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .
 			top: 2px;
 			width: 16px;
 			height: 16px;
-			font-size: fsz(8, 15);
+			font-size: mixins.fsz(8, 15);
 			font-weight: 700;
 			line-height: 16px;
-			color: $cb;
-			border: 1px solid $c13;
+			color: var(--cb);
+			border: 1px solid var(--c13);
 			border-radius: 2px;
 			text-align: center;
 		}
@@ -242,16 +276,16 @@ ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .
 	ul:not(.header-nav__list,
 		.header__phones,
 		.header__address,
-		header__s_ocial,
+		.header__s_ocial,
 		.breadcrumbs,
 		.services__list,
 		.footer__list,
 		.list-1,
 		.list-2,
-		.list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-1) {
+		.list-3, .contacts-info__list-1, .contacts-info__list-2, .list-style-, .header__lang) {
 		li {
 			&:before {
-				font-size: fsz(8, 14);
+				font-size: mixins.fsz(8, 14);
 			}
 		}
 	}
@@ -267,7 +301,7 @@ ol:not(.header-nav__list, .header__phones, .header__address, .header__s_ocial, .
 		.list-2,
 		.list-3,
 		.contacts-info__list-1,
-		.contacts-info__list-2, .list-style-1) {
+		.contacts-info__list-2, .list-style-1, .header__lang) {
 		li:before {
 			top: 1px;
 		}
@@ -280,9 +314,9 @@ p {
 }
 
 a {
-	color: $c3;
+	color: var(--c3);
 	text-decoration: none;
-	@include trs-all;
+	@include mixins.trs;
 
 	&:hover {
 		text-decoration: underline;
@@ -297,13 +331,13 @@ table {
 td {
 	padding: 12px 15px;
 	font-weight: 700;
-	border: 1px solid $c13;
+	border: 1px solid var(--c13);
 	line-height: 1.25;
 }
 
 @media (max-width: 576px) {
 	td {
-		font-size: fsz(12, 14);
+		font-size: mixins.fsz(12, 14);
 	}
 }
 
@@ -311,7 +345,7 @@ td {
 	td {
 		padding-left: 10px;
 		padding-right: 10px;
-		font-size: fsz(10, 14);
+		font-size: mixins.fsz(10, 14);
 	}
 }
 
@@ -343,7 +377,7 @@ b {
 		position: absolute;
 		top: 0;
 		left: 0;
-		@include imgSt;
+		@include mixins.imgSt;
 	}
 }
 
@@ -404,7 +438,7 @@ video {
 	}
 
 	a {
-		color: $c1;
+		color: var(--c1);
 		text-decoration: none;
 
 		&.s_ocial__y_outube {
@@ -412,7 +446,7 @@ video {
 			height: 14px;
 
 			&:hover {
-				color: $c19;
+				color: var(--c19);
 			}
 		}
 
@@ -421,7 +455,7 @@ video {
 			height: 20px;
 
 			&:hover {
-				color: $c20;
+				color: var(--c20);
 			}
 		}
 
@@ -430,7 +464,7 @@ video {
 			height: 17px;
 
 			&:hover {
-				color: $c21;
+				color: var(--c21);
 			}
 		}
 
@@ -444,19 +478,19 @@ video {
 
 		&.s_ocial__i_nstagram {
 			&:hover {
-				color: $c24;
+				color: var(--c24);
 			}
 		}
 
 		&.s_ocial__v_iber {
 			&:hover {
-				color: $c22;
+				color: var(--c22);
 			}
 		}
 
 		&.s_ocial__w_hatsapp {
 			&:hover {
-				color: $c23;
+				color: var(--c23);
 			}
 		}
 
@@ -464,7 +498,7 @@ video {
 			width: 100%;
 			height: 100%;
 			fill: currentColor;
-			@include trs;
+			@include mixins.trs;
 		}
 
 		&:hover {
@@ -480,7 +514,7 @@ video {
 	a {
 		position: relative;
 		display: inline-block;
-		font-size: fsz(12, 15);
+		font-size: mixins.fsz(12, 15);
 		font-weight: 300;
 		line-height: 1.2;
 	}
@@ -503,8 +537,8 @@ video {
 					bottom: 0;
 					width: 100%;
 					height: 1px;
-					background-color: $c3;
-					@include trs-all;
+					background-color: var(--c3);
+					@include mixins.trs;
 				}
 
 				&:hover {
@@ -521,7 +555,7 @@ video {
 				top: 7px;
 				width: 3px;
 				height: 1px;
-				background-color: $cb;
+				background-color: var(--cb);
 			}
 
 		}
@@ -530,7 +564,7 @@ video {
 			a {
 				pointer-events: none;
 				text-decoration: none;
-				color: $cb;
+				color: var(--cb);
 			}
 		}
 	}
@@ -561,7 +595,7 @@ video {
 		}
 
 		a {
-			font-size: fsz(10, 14);
+			font-size: mixins.fsz(10, 14);
 		}
 	}
 }
