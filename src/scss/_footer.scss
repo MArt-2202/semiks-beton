@@ -1,10 +1,13 @@
+@use 'mixins';
+@use 'sass:color';
+
 footer {
-	background-color: $c7;
+	background-color: var(--c7);
 }
 
 .footer__top,
 .footer__bottom {
-	font-size: fsz(16, 15);
+	font-size: mixins.fsz(16, 15);
 }
 
 .footer__top {
@@ -13,7 +16,7 @@ footer {
 	gap: 30px;
 	padding-top: 80px;
 	padding-bottom: 73px;
-	color: $c8;
+	color: var(--c8);
 
 	ul {
 		margin-bottom: 0;
@@ -23,10 +26,10 @@ footer {
 		&:first-child {
 			margin-bottom: 24px;
 			padding-left: 12px;
-			font-size: fsz(18, 15);
+			font-size: mixins.fsz(18, 15);
 			font-weight: 700;
 			line-height: 1;
-			color: $c1;
+			color: var(--c1);
 			text-transform: uppercase;
 		}
 	}
@@ -72,23 +75,23 @@ footer {
 			width: 2px;
 			height: 2px;
 			border-radius: 50%;
-			background-color: $c8;
+			background-color: var(--c8);
 		}
 	}
 
 	a {
 		display: inline-block;
-		color: $c8;
+		color: var(--c8);
 
 		&:hover {
 			text-decoration: none;
-			color: $c1;
+			color: var(--c1);
 		}
 	}
 }
 
 .footer__list-2 {
-	color: $c1;
+	color: var(--c1);
 
 	li {
 		position: relative;
@@ -102,14 +105,14 @@ footer {
 		svg {
 			position: absolute;
 			left: 0;
-			fill: $c1;
+			fill: var(--c1);
 		}
 	}
 
 	a {
 		display: table;
 		max-width: 100%;
-		color: $c1;
+		color: var(--c1);
 	}
 
 	.icon-production {
@@ -146,8 +149,8 @@ footer {
 	display: inline-block;
 	margin-bottom: 0;
 	padding: 26px 50px 24px 0;
-	color: $c1;
-	background-color: $c4;
+	color: var(--c1);
+	background-color: var(--c4);
 
 	&:before,
 	&:after {
@@ -155,7 +158,7 @@ footer {
 		position: absolute;
 		top: 0;
 		height: 100%;
-		background-color: $c4;
+		background-color: var(--c4);
 	}
 
 	&:before {
@@ -172,7 +175,7 @@ footer {
 	a {
 		display: inline-block;
 		font-weight: 500;
-		color: $c1;
+		color: var(--c1);
 	}
 }
 
@@ -201,7 +204,7 @@ footer {
 
 	.footer__top,
 	.footer__bottom {
-		font-size: fsz(12, 14);
+		font-size: mixins.fsz(12, 14);
 	}
 
 	.footer__top {
@@ -219,7 +222,7 @@ footer {
 	}
 
 	.footer__list-2 {
-		color: $c1;
+		color: var(--c1);
 
 		li {
 			position: relative;
@@ -233,14 +236,14 @@ footer {
 			svg {
 				position: absolute;
 				left: 0;
-				fill: $c1;
+				fill: var(--c1);
 			}
 		}
 
 		a {
 			display: table;
 			max-width: 100%;
-			color: $c1;
+			color: var(--c1);
 
 			&:not(:last-child) {
 				margin-bottom: 6px;
