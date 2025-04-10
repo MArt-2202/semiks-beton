@@ -1,13 +1,15 @@
-@include font-face('Montserrat',
+@use 'mixins';
+
+@include mixins.font-face('Montserrat',
 	'Montserrat/MontserratLight/MontserratLight',
 	300,
 	normal,
 	swap);
-@include font-face('Montserrat',
+@include mixins.font-face('Montserrat',
 	'Montserrat/MontserratRegular/MontserratRegular',
 	400,
 	normal,
 	swap);
-@include font-face('Montserrat', 'Montserrat/MontserratMedium/MontserratMedium', 500, normal, swap);
-@include font-face('Montserrat', 'Montserrat/MontserratBold/MontserratBold', 700, normal, swap);
-@include font-face('Montserrat', 'Montserrat/MontserratBlack/MontserratBlack', 900, normal, swap);
+@include mixins.font-face('Montserrat', 'Montserrat/MontserratMedium/MontserratMedium', 500, normal, swap);
+@include mixins.font-face('Montserrat', 'Montserrat/MontserratBold/MontserratBold', 700, normal, swap);
+@include mixins.font-face('Montserrat', 'Montserrat/MontserratBlack/MontserratBlack', 900, normal, swap);
