@@ -1,3 +1,4 @@
+import IMask from 'imask';
 export default function masketInput() {
 	if (document.querySelector('input[type=tel]')) {
 		document.querySelectorAll('input[type=tel]').forEach((el) => {
