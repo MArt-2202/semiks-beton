@@ -1,3 +1,6 @@
+@use 'mixins';
+@use 'sass:color';
+
 .hel {
 	width: 0;
 	height: 0;
@@ -51,11 +54,11 @@
 	height: 100vh;
 	opacity: 0;
 	visibility: hidden;
-	background: -moz-linear-gradient(top, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
-	background: -webkit-linear-gradient(top, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
-	background: linear-gradient(to bottom, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
+	background: -moz-linear-gradient(top, rgba(#030e27, 0.5) 0%, rgba(#030e27, 1) 100%);
+	background: -webkit-linear-gradient(top, rgba(#030e27, 0.5) 0%, rgba(#030e27, 1) 100%);
+	background: linear-gradient(to bottom, rgba(#030e27, 0.5) 0%, rgba(#030e27, 1) 100%);
 	pointer-events: none;
-	@include trs-all;
+	@include mixins.trs;
 }
 
 .overlay-visible {
@@ -110,7 +113,7 @@
 .btn {
 	display: inline-block;
 	padding: 13px 10px;
-	font-size: fsz(12, 15);
+	font-size: mixins.fsz(12, 15);
 	line-height: 1;
 	border: 1px solid transparent;
 	border-radius: 5px;
@@ -140,57 +143,57 @@
 }
 
 .btn-default {
-	color: $c1;
-	border-color: $c1;
+	color: var(--c1);
+	border-color: var(--c1);
 
 	&:hover {
-		background-color: $c3;
-		border-color: $c3;
+		background-color: var(--c3);
+		border-color: var(--c3);
 	}
 }
 
 .btn-info {
-	color: $c7;
-	background-color: $c1;
-	border-color: $c1;
+	color: var(--c7);
+	background-color: var(--c1);
+	border-color: var(--c1);
 
 	&:hover {
-		color: $c1;
-		background-color: $c3;
-		border-color: $c3;
+		color: var(--c1);
+		background-color: var(--c3);
+		border-color: var(--c3);
 	}
 }
 
 .btn-info-2 {
-	color: $c4;
-	background-color: $c1;
-	border-color: $c1;
+	color: var(--c4);
+	background-color: var(--c1);
+	border-color: var(--c1);
 
 	&:hover {
-		color: $c1;
-		background-color: $c4;
-		border-color: $c1;
+		color: var(--c1);
+		background-color: var(--c4);
+		border-color: var(--c1);
 	}
 }
 
 .btn-light {
-	color: $c1;
+	color: var(--c1);
 	background-color: transparent;
 	border-color: transparent;
 
 	&:hover {
-		border-color: $c1;
+		border-color: var(--c1);
 	}
 }
 
 .btn-success {
-	color: $c1;
-	background-color: $c3;
-	border-color: $c3;
+	color: var(--c1);
+	background-color: var(--c3);
+	border-color: var(--c3);
 
 	&:hover {
-		background-color: $c12;
-		border-color: $c12;
+		background-color: var(--c12);
+		border-color: var(--c12);
 	}
 }
 
