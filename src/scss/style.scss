@@ -1,4 +1,12 @@
-@use 'sass:math';
-
-@import 'reset', 'variables', 'mixins', 'fonts', 'default',
-'header', 'add-styles', 'lists', 'forms', 'content', 'footer', 'swiper-bundle', 'modal';
+@use 'reset';
+@use 'mixins';
+@use 'fonts';
+@use 'default';
+@use 'header';
+@use 'add-styles';
+@use 'lists';
+@use 'forms';
+@use 'content';
+@use 'footer';
+@use 'swiper-bundle';
+@use 'modal';
