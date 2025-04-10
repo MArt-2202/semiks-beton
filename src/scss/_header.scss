@@ -1,3 +1,6 @@
+@use 'mixins';
+@use 'sass:color';
+
 header {
 	.container {
 		display: flex;
@@ -36,10 +39,10 @@ header {
 	strong {
 		position: relative;
 		top: 1px;
-		font-size: fsz(12, 15);
+		font-size: mixins.fsz(12, 15);
 		font-weight: 300;
 		line-height: 1.25;
-		color: $c1;
+		color: var(--c1);
 	}
 }
 
@@ -62,19 +65,26 @@ header {
 		transform: translateY(-50%);
 		width: 18px;
 		height: 18px;
-		fill: $c1;
+		fill: var(--c1);
 	}
 }
 
-.header__phones {
+.header__phones,
+.header__lang {
 	a {
 		display: inline-block;
 		line-height: 1;
 
 		&:hover {
 			text-decoration: none;
-			color: $c4;
+			color: var(--c4);
 		}
+	}
+}
+
+.header__lang {
+	a {
+		text-transform: uppercase;
 	}
 }
 
@@ -137,7 +147,7 @@ header {
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: rgba($c3, 0.8);
+				background-color: rgba(#162B73, 0.8);
 			}
 		}
 	}
@@ -160,30 +170,32 @@ header {
 		}
 
 		a {
-			font-size: fsz(12, 15);
+			font-size: mixins.fsz(12, 15);
 			font-weight: 500;
 			line-height: 1;
-			color: $c1;
+			color: var(--c1);
 
 			&:hover {
-				color: $c4;
+				color: var(--c4);
 			}
 		}
 	}
 
 	.header__phones a,
+	.header__lang a,
 	.header__address {
-		font-size: fsz(12, 15);
-		color: $c1;
+		font-size: mixins.fsz(12, 15);
+		color: var(--c1);
 	}
 
 	.header__phones-wrapper {
 		svg {
-			fill: $c1;
+			fill: var(--c1);
 		}
 	}
 
-	.header__phones {
+	.header__phones,
+	.header__lang {
 		a {
 			font-weight: 900;
 		}
@@ -197,7 +209,7 @@ header {
 		left: 0;
 		z-index: 998;
 		width: 100%;
-		background-color: $c3;
+		background-color: var(--c3);
 
 		.container {
 			height: 70px;
@@ -210,6 +222,7 @@ header {
 	.header__bl-3,
 	.header__bl-4,
 	.header__nav,
+	.header__lang,
 	.header__phones-wrapper,
 	.header__address,
 	.header__s_ocial {
@@ -227,6 +240,7 @@ header {
 	.toggle-wrapper {
 		vertical-align: middle;
 
+		.header__lang,
 		.header__nav,
 		.header__phones-wrapper,
 		.header__address,
@@ -247,8 +261,8 @@ header {
 		visibility: hidden;
 		transform: scaleY(0);
 		transform-origin: top;
-		background-color: $c1;
-		@include trs-all;
+		background-color: var(--c1);
+		@include mixins.trs;
 
 		>div {
 			position: relative;
@@ -284,8 +298,8 @@ header {
 			left: 0;
 			height: 3px;
 			width: 100%;
-			background-color: $c1;
-			@include trs;
+			background-color: var(--c1);
+			@include mixins.trs;
 
 			&:first-child {
 				top: 0;
@@ -314,7 +328,7 @@ header {
 
 			&:nth-child(2),
 			&:nth-child(3) {
-				background-color: $c15;
+				background-color: var(--c15);
 			}
 
 			&:first-child {
@@ -346,9 +360,13 @@ header {
 		}
 	}
 
+	.header__lang+.header__s_ocial {
+		margin-top: 30px;
+	}
+
 	.header__s_ocial {
 		a {
-			color: $c3;
+			color: var(--c3);
 		}
 
 		&+.header__phones-wrapper {
@@ -357,14 +375,15 @@ header {
 	}
 
 	.header__phones a,
+	.header__lang a,
 	.header__address {
 		font-size: 1rem;
-		color: $c3;
+		color: var(--c3);
 	}
 
 	.header__phones-wrapper {
 		svg {
-			fill: $c3;
+			fill: var(--c3);
 		}
 	}
 
@@ -387,13 +406,13 @@ header {
 		a {
 			display: block;
 			padding: 7px 10px;
-			font-size: fsz(24, 15);
+			font-size: mixins.fsz(24, 15);
 			font-weight: 500;
 			line-height: 1;
 
 			&:hover {
 				text-decoration: none;
-				color: $c4;
+				color: var(--c4);
 			}
 		}
 	}
