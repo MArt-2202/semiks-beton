@@ -1,3 +1,6 @@
+@use 'mixins';
+@use 'sass:color';
+
 .modal-overlay {
 	position: fixed;
 	top: 0;
@@ -6,13 +9,13 @@
 	width: 100%;
 	height: 100%;
 	padding: 20px;
-	background: -moz-linear-gradient(top, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
-	background: -webkit-linear-gradient(top, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
-	background: linear-gradient(to bottom, rgba($c7, 0.5) 0%, rgba($c7, 1) 100%);
+	background: -moz-linear-gradient(top, rgba(#030e27, 0.5) 0%, rgba(#030e27, 1) 100%);
+	background: -webkit-linear-gradient(top, rgba(#030e27, 0.5) 0%, rgba(#030e27, 1) 100%);
+	background: linear-gradient(to bottom, rgba(#030e27, 0.5) 0%, rgba(#030e27, 1) 100%);
 	text-align: center;
 	visibility: hidden;
 	opacity: 0;
-	@include trs-all;
+	@include mixins.trs;
 }
 
 .modal {
@@ -39,17 +42,17 @@
 	width: calc(min(900px, 100%));
 	overflow: hidden;
 	border-radius: 5px;
-	max-height: calc(100vh - 40px);
+	max-height: calc(100dvh - 40px);
 	padding: 50px 15px;
 	overflow-y: auto;
 	overscroll-behavior-y: contain;
-	background-color: $c1;
+	background-color: var(--c1);
 	border-radius: 5px;
 	text-align: left;
 	opacity: 0;
 	-webkit-transform: scale(0);
 	transform: scale(0);
-	@include trs-all;
+	@include mixins.trs;
 	transition-delay: 100ms;
 
 	.video-wrapper {
@@ -85,17 +88,17 @@
 	right: 13px;
 	padding: 0;
 	cursor: pointer;
-	color: $c4;
+	color: var(--c4);
 
 	svg {
 		width: 25px;
 		height: 25px;
 		fill: currentColor;
-		@include trs-all;
+		@include mixins.trs;
 	}
 
 	&:hover {
-		color: $c15;
+		color: var(--c15);
 	}
 }
 
@@ -105,6 +108,6 @@
 	}
 
 	.modal__content {
-		max-height: calc(100vh - 30px);
+		max-height: calc(100dvh - 30px);
 	}
 }
