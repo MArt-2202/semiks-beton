@@ -1,3 +1,6 @@
+@use 'mixins';
+@use 'sass:color';
+
 input,
 button,
 textarea,
@@ -34,8 +37,8 @@ textarea {
 
 input:not([type='checkbox']):not([type='radio']),
 textarea {
-	@include placeholder {
-		color: $cb;
+	@include mixins.placeholder {
+		color: var(--cb);
 		text-overflow: ellipsis;
 		opacity: 1;
 	}
@@ -74,13 +77,13 @@ textarea {
 	input:not([type='checkbox']):not([type='radio']),
 	textarea {
 		width: 100%;
-		background-color: $c1;
-		color: $cb;
+		background-color: var(--c1);
+		color: var(--cb);
 		border: 1px solid transparent;
-		@include trs;
+		@include mixins.trs;
 
 		&:focus {
-			border-color: $c3;
+			border-color: var(--c3);
 		}
 	}
 
@@ -101,10 +104,10 @@ textarea {
 		input:not([type='checkbox']):not([type='radio']):not([type='hidden']):not([type='file']),
 		textarea {
 			&:required {
-				border-color: $c17;
+				border-color: var(--c17);
 
 				&:valid {
-					border-color: $c18;
+					border-color: var(--c18);
 				}
 			}
 		}
@@ -116,15 +119,15 @@ textarea {
 	padding: 13px 15px 12px 15px;
 	font-weight: 500;
 	line-height: 1;
-	color: $cb;
+	color: var(--cb);
 	text-align: center;
-	background-color: $c5;
+	background-color: var(--c5);
 	cursor: pointer;
-	@include trs;
+	@include mixins.trs;
 
 	&:hover {
-		background-color: $c3;
-		color: $c1;
+		background-color: var(--c3);
+		color: var(--c1);
 	}
 }
 
@@ -141,14 +144,14 @@ textarea {
 
 	label {
 		font-weight: 500;
-		color: $c1;
+		color: var(--c1);
 		text-align: center;
 
 		&[data-required] {
 			span {
 				&:after {
 					font-weight: 500;
-					color: $c4;
+					color: var(--c4);
 				}
 			}
 		}
